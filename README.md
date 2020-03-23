@@ -1,5 +1,3 @@
-<style>code { white-space : pre-wrap !important; }</style>
-
 # kodmunki Utilities
 This project contains the latest builds of kodmunki Utilities. Documentation for these utilities can be found at
 their respective project repositories
