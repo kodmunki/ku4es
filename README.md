@@ -1,9 +1,11 @@
 # kodmunki Utilities
-This project contains the latest builds of kodmunki Utilities. Documentation for these utilities can be found at
-their respective project repositories
+This project contains the latest builds of kodmunki™ Utilities. Documentation for these utilities can be found at
+their respective project repos.
 
 * [ku4es-kernel](https://github.com/kodmunki/ku4es-kernel)
+* [ku4es-data](https://github.com/kodmunki/ku4es-data)
 * [ku4es-ui-kernel](https://github.com/kodmunki/ku4es-ui-kernel)
+* [ku4es-ui-data](https://github.com/kodmunki/ku4es-ui-data)
 
 ## Bookmarklets
 
