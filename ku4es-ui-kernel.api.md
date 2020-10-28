@@ -10,6 +10,14 @@
 ## Functions
 
 <dl>
+<dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
+<dd></dd>
+<dt><a href="#read">read()</a> ⇒ <code>Object</code></dt>
+<dd></dd>
+<dt><a href="#readJson">readJson(form)</a> ⇒ <code>string</code></dt>
+<dd></dd>
+<dt><a href="#write">write(form, data)</a></dt>
+<dd></dd>
 <dt><a href="#encodeBase64">encodeBase64(string)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#decodeBase64">decodeBase64(string)</a> ⇒ <code>string</code></dt>
@@ -227,6 +235,50 @@
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
+<a name="readData"></a>
+
+## readData(form) ⇒ <code>FormData</code>
+**Kind**: global function  
+**Summary**: Reads data as FormData from a form.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| form | <code>HTMLFormElement</code> | the form to read. |
+
+<a name="read"></a>
+
+## read() ⇒ <code>Object</code>
+**Kind**: global function  
+**Summary**: Reads data as an object of key value pairs
+from a form. Where the keys are the names of each
+field and the values are the value of these fields.
+{HTMLFormElement} form - the form to read.  
+<a name="readJson"></a>
+
+## readJson(form) ⇒ <code>string</code>
+**Kind**: global function  
+**Summary**: Reads data as JSON of key value pairs
+from a form. Where the keys are the names of each
+field and the values are the value of these fields.
+{HTMLFormElement} form - the form to read.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| form | <code>HTMLFormElement</code> | the form to read. |
+
+<a name="write"></a>
+
+## write(form, data)
+**Kind**: global function  
+**Summary**: Write data as an object to a form. Where
+the keys are the names of each field and the values
+are the value of these fields.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| form | <code>HTMLFormElement</code> | the form to write to. |
+| data | <code>Object</code> |  |
+
 <a name="encodeBase64"></a>
 
 ## encodeBase64(string) ⇒ <code>string</code>

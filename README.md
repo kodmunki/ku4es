@@ -60,6 +60,11 @@ javascript:void((function(){var script=document.createElement('script');script.t
 
 ### ku4es-ui-kernel
 
+An incredible suit of UI tools that are succinct, expressive, speak to their
+intention and are a joy to code with. Powerful tools for form and keyboard key
+management, document control, and complex user actions like swiping.
+[Docs here](ku4es-ui-kernel.api.md).
+
 [ku4es-ui-kernel](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-ui-kernel.js)
 
 ```html
