@@ -1,7 +1,7 @@
 # ku4es
 **kodmunki Utilities for ECMAScript**
 
-This project includes links, script tags, and bookmarklets for including some of all of the 
+This project includes links, script tags, and bookmarklets for including some, or all of the 
 ku4es stack in your projects.
 
 <table>
@@ -27,7 +27,9 @@ ku4es stack in your projects.
 
 ### ku4es-kernel
 
-[ku4es-kernel](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-kernel.js)
+ku4es-kernel are core JavaScript entities highly useful in many projects
+as a standalone dependency, and the foundation of higher-level ku4es libraries.
+[Docs here](ku4es-kernel.api.md).
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-kernel.js"></script>
