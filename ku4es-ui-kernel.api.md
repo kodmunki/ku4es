@@ -12,7 +12,7 @@
 <dl>
 <dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
 <dd></dd>
-<dt><a href="#read">read()</a> ⇒ <code>Object</code></dt>
+<dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
 <dd></dd>
 <dt><a href="#readJson">readJson(form)</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -247,20 +247,23 @@
 
 <a name="read"></a>
 
-## read() ⇒ <code>Object</code>
+## read(form) ⇒ <code>Object</code>
 **Kind**: global function  
 **Summary**: Reads data as an object of key value pairs
 from a form. Where the keys are the names of each
-field and the values are the value of these fields.
-{HTMLFormElement} form - the form to read.  
+field and the values are the value of these fields.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| form | <code>HTMLFormElement</code> | the form to read. |
+
 <a name="readJson"></a>
 
 ## readJson(form) ⇒ <code>string</code>
 **Kind**: global function  
 **Summary**: Reads data as JSON of key value pairs
 from a form. Where the keys are the names of each
-field and the values are the value of these fields.
-{HTMLFormElement} form - the form to read.  
+field and the values are the value of these fields.  
 
 | Param | Type | Description |
 | --- | --- | --- |
