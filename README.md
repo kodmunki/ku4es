@@ -44,6 +44,8 @@ javascript:void((function(){var script=document.createElement('script');script.t
 
 ### ku4es-data
 
+
+
 [ku4es-data](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js)
 
 ```html
