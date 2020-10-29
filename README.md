@@ -80,7 +80,7 @@ javascript:void((function(){var script=document.createElement('script');script.t
 
 ### ku4es-ui-data
 
-A  suit of tools binary and image file meta data.
+A  suit of tools binary and image file metadata.
 [Docs here](ku4es-data.api.md).
 
 [ku4es-ui-data](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-ui-data.js)
