@@ -8,10 +8,6 @@
 ## Functions
 
 <dl>
-<dt><a href="#toBlob">toBlob(contentType)</a> ⇒ <code>Blob</code></dt>
-<dd></dd>
-<dt><a href="#parseDataUrl">parseDataUrl(dataUrl)</a> ⇒ <code><a href="#BinaryFile">BinaryFile</a></code></dt>
-<dd></dd>
 <dt><a href="#createBlobFromBinaryArray">createBlobFromBinaryArray(binaryArray, mimeType)</a> ⇒ <code>Blob</code></dt>
 <dd></dd>
 <dt><a href="#createBlobFromDataUrl">createBlobFromDataUrl(dataUrl)</a> ⇒ <code>Blob</code></dt>
@@ -34,6 +30,14 @@
 **Kind**: global class  
 **Summary**: A binary file abstraction that exposes methods for
 reading data from a binary file.  
+
+* [BinaryFile](#BinaryFile)
+    * [new BinaryFile(byteString)](#new_BinaryFile_new)
+    * _instance_
+        * [.toBlob(mimeType)](#BinaryFile+toBlob) ⇒ <code>Blob</code>
+    * _static_
+        * [.parseDataUrl(dataUrl)](#BinaryFile.parseDataUrl) ⇒ [<code>BinaryFile</code>](#BinaryFile)
+
 <a name="new_BinaryFile_new"></a>
 
 ### new BinaryFile(byteString)
@@ -42,19 +46,21 @@ reading data from a binary file.
 | --- |
 | byteString | 
 
-<a name="toBlob"></a>
+<a name="BinaryFile+toBlob"></a>
 
-## toBlob(contentType) ⇒ <code>Blob</code>
-**Kind**: global function  
+### binaryFile.toBlob(mimeType) ⇒ <code>Blob</code>
+**Kind**: instance method of [<code>BinaryFile</code>](#BinaryFile)  
+**Access**: public  
 
-| Param | Type |
-| --- | --- |
-| contentType | <code>string</code> | 
+| Param | Type | Description |
+| --- | --- | --- |
+| mimeType | <code>string</code> | A valid MIMEType |
 
-<a name="parseDataUrl"></a>
+<a name="BinaryFile.parseDataUrl"></a>
 
-## parseDataUrl(dataUrl) ⇒ [<code>BinaryFile</code>](#BinaryFile)
-**Kind**: global function  
+### BinaryFile.parseDataUrl(dataUrl) ⇒ [<code>BinaryFile</code>](#BinaryFile)
+**Kind**: static method of [<code>BinaryFile</code>](#BinaryFile)  
+**Access**: public  
 
 | Param |
 | --- |

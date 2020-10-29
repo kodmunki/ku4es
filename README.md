@@ -41,22 +41,6 @@ as a standalone dependency, and the foundation of higher-level ku4es libraries.
 javascript:void((function(){var script=document.createElement('script');script.type='text/javascript';script.onload=function(){window.ku4=Object.assign(window.ku4 || {}, window.ku4es_kernel)};script.src='https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-kernel.js';document.head.appendChild(script);})());
 ```
 
-
-### ku4es-data
-
-
-[ku4es-data](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js)
-
-```html
-<script src="https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js"></script>
-```
-
-#### Bookmarklet
-
-```
-javascript:void((function(){var script=document.createElement('script');script.type='text/javascript';script.onload=function(){window.ku4=Object.assign(window.ku4 || {}, window.ku4es_data)};script.src='https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js';document.head.appendChild(script);})());
-```
-
 ### ku4es-ui-kernel
 
 An incredible suit of UI tools that are succinct, expressive, speak to their
@@ -76,7 +60,28 @@ management, document control, and complex user actions like swiping.
 javascript:void((function(){var script=document.createElement('script');script.type='text/javascript';script.onload=function(){window.ku4=Object.assign(window.ku4 || {}, window.ku4es_ui_kernel)};script.src='https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-ui-kernel.js';document.head.appendChild(script);})());
 ```
 
+
+### ku4es-data
+
+A core suit of tools for reading binary and image file meta data.
+[Docs here](ku4es-data.api.md).
+
+[ku4es-data](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js)
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js"></script>
+```
+
+#### Bookmarklet
+
+```
+javascript:void((function(){var script=document.createElement('script');script.type='text/javascript';script.onload=function(){window.ku4=Object.assign(window.ku4 || {}, window.ku4es_data)};script.src='https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-data.js';document.head.appendChild(script);})());
+```
+
 ### ku4es-ui-data
+
+A  suit of tools binary and image file meta data.
+[Docs here](ku4es-data.api.md).
 
 [ku4es-ui-data](https://cdn.jsdelivr.net/gh/kodmunki/ku4es/ku4es-ui-data.js)
 
