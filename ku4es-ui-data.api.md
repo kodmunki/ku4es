@@ -110,9 +110,9 @@ reading data from a binary file.
 | options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.maxDims | <code>number</code> |  |
-| options.maxDims.width | <code>number</code> | Maximum width of converted asset |
-| options.maxDims.height | <code>number</code> | Maximum height of converted asset |
+| options.resolution | <code>number</code> |  |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
 
 <a name="dataUrlFromSrc"></a>
 
@@ -127,9 +127,9 @@ reading data from a binary file.
 | options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.maxDims | <code>number</code> |  |
-| options.maxDims.width | <code>number</code> | Maximum width of converted asset |
-| options.maxDims.height | <code>number</code> | Maximum height of converted asset |
+| options.resolution | <code>number</code> |  |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
 
 <a name="dataUrlFromFile"></a>
 
@@ -144,9 +144,9 @@ reading data from a binary file.
 | options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.maxDims | <code>number</code> |  |
-| options.maxDims.width | <code>number</code> | Maximum width of converted asset |
-| options.maxDims.height | <code>number</code> | Maximum height of converted asset |
+| options.resolution | <code>number</code> |  |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
 
 <a name="blobFromFile"></a>
 
@@ -161,7 +161,7 @@ reading data from a binary file.
 | options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.maxDims | <code>number</code> |  |
-| options.maxDims.width | <code>number</code> | Maximum width of converted asset |
-| options.maxDims.height | <code>number</code> | Maximum height of converted asset |
+| options.resolution | <code>number</code> |  |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
 
