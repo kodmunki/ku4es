@@ -111,8 +111,9 @@ reading data from a binary file.
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
 | options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="dataUrlFromSrc"></a>
 
@@ -128,8 +129,9 @@ reading data from a binary file.
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
 | options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="dataUrlFromFile"></a>
 
@@ -145,8 +147,9 @@ reading data from a binary file.
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
 | options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="blobFromFile"></a>
 
@@ -162,6 +165,7 @@ reading data from a binary file.
 | options.mimeType | <code>string</code> | A valid MIME type. |
 | options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
 | options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis |
+| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
