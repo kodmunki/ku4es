@@ -7,6 +7,33 @@
 <dd></dd>
 </dl>
 
+## Members
+
+<dl>
+<dt><a href="#orientation">orientation</a> ⇒ <code>string</code></dt>
+<dd><p>Returns the current Device orientation which can be
+tested against the available Device orientation
+constants to determine the orientation of the device.</p>
+</dd>
+<dt><a href="#landscapePrimary">landscapePrimary</a> ⇒ <code>string</code></dt>
+<dd><p>Constant to test if device is oriented in landscape.</p>
+</dd>
+<dt><a href="#landscapeSecondary">landscapeSecondary</a> ⇒ <code>string</code></dt>
+<dd><p>Constant to test if device is oriented in landscape
+and upside-down.</p>
+</dd>
+<dt><a href="#portraitPrimary">portraitPrimary</a> ⇒ <code>string</code></dt>
+<dd><p>Constant to test if device is oriented in portrait.</p>
+</dd>
+<dt><a href="#portraitSecondary">portraitSecondary</a> ⇒ <code>string</code></dt>
+<dd><p>Constant to test if device is oriented in portrait
+and upside-down.</p>
+</dd>
+<dt><a href="#isMobile">isMobile</a> ⇒ <code>boolean</code></dt>
+<dd><p>Returns true if device is mobile</p>
+</dd>
+</dl>
+
 ## Functions
 
 <dl>
@@ -235,6 +262,46 @@
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
+<a name="orientation"></a>
+
+## orientation ⇒ <code>string</code>
+Returns the current Device orientation which can be
+tested against the available Device orientation
+constants to determine the orientation of the device.
+
+**Kind**: global variable  
+<a name="landscapePrimary"></a>
+
+## landscapePrimary ⇒ <code>string</code>
+Constant to test if device is oriented in landscape.
+
+**Kind**: global variable  
+<a name="landscapeSecondary"></a>
+
+## landscapeSecondary ⇒ <code>string</code>
+Constant to test if device is oriented in landscape
+and upside-down.
+
+**Kind**: global variable  
+<a name="portraitPrimary"></a>
+
+## portraitPrimary ⇒ <code>string</code>
+Constant to test if device is oriented in portrait.
+
+**Kind**: global variable  
+<a name="portraitSecondary"></a>
+
+## portraitSecondary ⇒ <code>string</code>
+Constant to test if device is oriented in portrait
+and upside-down.
+
+**Kind**: global variable  
+<a name="isMobile"></a>
+
+## isMobile ⇒ <code>boolean</code>
+Returns true if device is mobile
+
+**Kind**: global variable  
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
@@ -322,6 +389,11 @@ are the value of these fields.
 | --- | --- | --- |
 | string | <code>string</code> | string to decode. |
 
+<a name="Device"></a>
+
+## .Device
+**Kind**: static class  
+**Summary**: Device abstraction  
 <a name="Document"></a>
 
 ## .Document
