@@ -105,15 +105,15 @@ reading data from a binary file.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| src | <code>string</code> | path to target image |
+| src | <code>string</code> | path to target image or dataURL |
 | [options] | <code>Object</code> |  |
-| options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
-| options.mimeType | <code>string</code> | A valid MIME type. |
-| options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
-| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
+| [options.crossOrigin] | <code>boolean</code> | Set to true to support cross origin sources. |
+| [options.mimeType] | <code>string</code> | A valid MIME type. |
+| [options.maxAttempts] | <code>number</code> | The maximum number of attempts to convert before timeout. |
+| [options.resolution] | <code>number</code> |  |
+| [options.resolution.x] | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| [options.resolution.y] | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| [options.orientation] | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="dataUrlFromSrc"></a>
 
@@ -125,13 +125,13 @@ reading data from a binary file.
 | --- | --- | --- |
 | src | <code>string</code> | path to target image |
 | [options] | <code>Object</code> |  |
-| options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
-| options.mimeType | <code>string</code> | A valid MIME type. |
-| options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
-| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
+| [options.crossOrigin] | <code>boolean</code> | Set to true to support cross origin sources. |
+| [options.mimeType] | <code>string</code> | A valid MIME type. |
+| [options.maxAttempts] | <code>number</code> | The maximum number of attempts to convert before timeout. |
+| [options.resolution] | <code>number</code> |  |
+| [options.resolution.x] | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| [options.resolution.y] | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| [options.orientation] | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="dataUrlFromFile"></a>
 
@@ -143,13 +143,13 @@ reading data from a binary file.
 | --- | --- | --- |
 | file | <code>File</code> | File to convert |
 | [options] | <code>Object</code> |  |
-| options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
-| options.mimeType | <code>string</code> | A valid MIME type. |
-| options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
-| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
+| [options.crossOrigin] | <code>boolean</code> | Set to true to support cross origin sources. |
+| [options.mimeType] | <code>string</code> | A valid MIME type. |
+| [options.maxAttempts] | <code>number</code> | The maximum number of attempts to convert before timeout. |
+| [options.resolution] | <code>number</code> |  |
+| [options.resolution.x] | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| [options.resolution.y] | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| [options.orientation] | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
 <a name="blobFromFile"></a>
 
@@ -161,11 +161,11 @@ reading data from a binary file.
 | --- | --- | --- |
 | file | <code>File</code> | File to convert |
 | [options] | <code>Object</code> |  |
-| options.crossOrigin | <code>boolean</code> | Set to true to support cross origin sources. |
-| options.mimeType | <code>string</code> | A valid MIME type. |
-| options.maxAttempts | <code>number</code> | The maximum number of attempts to convert before timeout. |
-| options.resolution | <code>number</code> |  |
-| options.resolution.x | <code>number</code> | Pixel dimension resolution on the x-axis. |
-| options.resolution.y | <code>number</code> | Pixel dimension resolution on the y-axis. |
-| options.orientation | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
+| [options.crossOrigin] | <code>boolean</code> | Set to true to support cross origin sources. |
+| [options.mimeType] | <code>string</code> | A valid MIME type. |
+| [options.maxAttempts] | <code>number</code> | The maximum number of attempts to convert before timeout. |
+| [options.resolution] | <code>number</code> |  |
+| [options.resolution.x] | <code>number</code> | Pixel dimension resolution on the x-axis. |
+| [options.resolution.y] | <code>number</code> | Pixel dimension resolution on the y-axis. |
+| [options.orientation] | <code>number</code> | Current orientation. A number 1-8 following EXIF Orientation rules. |
 
