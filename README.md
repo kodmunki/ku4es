@@ -6,7 +6,7 @@ ku4es stack in your projects.
 
 <table>
     <tr>
-        <td rowspan="2" style="text-align:center">
+        <td colspan="2" style="text-align:center">
             <a href="#ku4es-ui-data">ku4es-ui-data</a>
         </td>
     </tr>
