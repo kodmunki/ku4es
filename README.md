@@ -6,20 +6,20 @@ ku4es stack in your projects.
 
 <table>
     <tr>
-        <td colspan="2" style="text-align:center">
+        <td colspan="2" style="text-align: center;">
             <a href="#ku4es-ui-data">ku4es-ui-data</a>
         </td>
     </tr>
     <tr>
-        <td style="text-align:center">
+        <td style="text-align: center;">
             <a href="#ku4es-ui-kernel">ku4es-ui-kernel</a>
         </td>
-        <td style="text-align:center">
+        <td style="text-align: center;">
             <a href="#ku4es-data">ku4es-data</a>
         </td>
     </tr>
     <tr>
-        <td colspan="2" style="text-align:center">
+        <td colspan="2" style="text-align: center;">
             <a href="#ku4es-kernel">ku4es-kernel</a>
         </td>
     </tr>
