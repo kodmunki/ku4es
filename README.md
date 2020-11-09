@@ -7,13 +7,13 @@ ku4es stack in your projects.
 <table>
     <tr>
         <td rowspan="2" style="text-align:center">
-            <a href="#ku4es-ui-kernel">ku4es-ui-kernel</a>
-        </td>
-        <td style="text-align:center">
             <a href="#ku4es-ui-data">ku4es-ui-data</a>
         </td>
     </tr>
     <tr>
+        <td style="text-align:center">
+            <a href="#ku4es-ui-kernel">ku4es-ui-kernel</a>
+        </td>
         <td style="text-align:center">
             <a href="#ku4es-data">ku4es-data</a>
         </td>
