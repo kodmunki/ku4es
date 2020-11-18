@@ -128,6 +128,8 @@
     * [.isOdd(value)](#Assert.isOdd) ⇒ <code>boolean</code>
     * [.isString(value)](#Assert.isString) ⇒ <code>boolean</code>
     * [.isFunction(value)](#Assert.isFunction) ⇒ <code>boolean</code>
+    * [.isAsyncFunction(value)](#Assert.isAsyncFunction) ⇒ <code>boolean</code>
+    * [.isPromise(value)](#Assert.isPromise) ⇒ <code>boolean</code>
     * [.isObject(value)](#Assert.isObject) ⇒ <code>boolean</code>
     * [.isObjectLiteral(value)](#Assert.isObjectLiteral) ⇒ <code>boolean</code>
     * [.isTruthy(value)](#Assert.isTruthy) ⇒ <code>boolean</code>
@@ -287,7 +289,30 @@
 
 ### Assert.isFunction(value) ⇒ <code>boolean</code>
 **Kind**: static method of [<code>Assert</code>](#Assert)  
+**Summary**: Returns true if and only if value is a function.
+Note: AsyncFunction will also return true for this check.
+It is advisable to check first for AsyncFunction, then for
+Function where you may be expecting either.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | value to test |
+
+<a name="Assert.isAsyncFunction"></a>
+
+### Assert.isAsyncFunction(value) ⇒ <code>boolean</code>
+**Kind**: static method of [<code>Assert</code>](#Assert)  
 **Summary**: Returns true if and only if value is a function.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>\*</code> | value to test |
+
+<a name="Assert.isPromise"></a>
+
+### Assert.isPromise(value) ⇒ <code>boolean</code>
+**Kind**: static method of [<code>Assert</code>](#Assert)  
+**Summary**: Returns true if and only if value is a Promise.  
 
 | Param | Type | Description |
 | --- | --- | --- |
