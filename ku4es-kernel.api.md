@@ -813,7 +813,7 @@ now as defined by the system clock.
     * [.roundUp([to])](#Money+roundUp) ⇒ [<code>Money</code>](#Money)
     * [.exchange(rate, currency)](#Money+exchange) ⇒ [<code>Money</code>](#Money)
     * [.isOfCurrency(other)](#Money+isOfCurrency) ⇒ <code>boolean</code>
-    * [.toString([format])](#Money+toString) ⇒ <code>string</code>
+    * [.toString([format], [delimiter])](#Money+toString) ⇒ <code>string</code>
     * [.zero(currency)](#Money+zero) ⇒ [<code>Money</code>](#Money)
     * [.isMoney(other)](#Money+isMoney) ⇒ <code>boolean</code>
     * [.canParse(value)](#Money+canParse) ⇒ <code>boolean</code>
@@ -1005,7 +1005,7 @@ Use `isOfCurrency` to check currencies and `exchange` as necessary._
 
 <a name="Money+toString"></a>
 
-### money.toString([format]) ⇒ <code>string</code>
+### money.toString([format], [delimiter]) ⇒ <code>string</code>
 **Kind**: instance method of [<code>Money</code>](#Money)  
 **Summary**: Returns a string representation of this formatted to the
 passed format, where format follows the following rules:<br/>
@@ -1016,6 +1016,7 @@ passed format, where format follows the following rules:<br/>
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [format] | <code>string</code> | <code>&quot;d.c2&quot;</code> | format string. |
+| [delimiter] | <code>string</code> |  | a 1000x grouping delimiter. |
 
 <a name="Money+zero"></a>
 
@@ -1641,7 +1642,7 @@ or a set value if passed, or zero.
 | Param | Type | Description |
 | --- | --- | --- |
 | string | <code>string</code> | String to mask |
-| template | <code>string</code> | Mask template |
+| template | <code>string</code> \| <code>function</code> | Mask template |
 | [char] | <code>string</code> | Mask character in template defaults to '_'. |
 
 <a name="unmask"></a>
@@ -1653,7 +1654,7 @@ or a set value if passed, or zero.
 | Param | Type | Description |
 | --- | --- | --- |
 | string | <code>string</code> | String to unmask |
-| template | <code>string</code> | Mask template |
+| template | <code>string</code> \| <code>function</code> | Mask template |
 | [char] | <code>string</code> | Mask character in template defaults to '_'. |
 
 <a name="nextTick"></a>
