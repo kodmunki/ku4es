@@ -57,6 +57,10 @@
 <dd></dd>
 <dt><a href="#uuid">uuid()</a> ⇒ <code>string</code></dt>
 <dd></dd>
+<dt><a href="#suid">suid()</a> ⇒ <code>symbol</code></dt>
+<dd></dd>
+<dt><a href="#suuid">suuid()</a> ⇒ <code>symbol</code></dt>
+<dd></dd>
 <dt><a href="#round">round(value, toNearest)</a> ⇒ <code>number</code></dt>
 <dd></dd>
 <dt><a href="#roundUp">roundUp(value, toNearest)</a> ⇒ <code>number</code></dt>
@@ -80,6 +84,8 @@
 <dt><a href="#tryParseFloat">tryParseFloat(value, valueIfNan)</a> ⇒ <code>number</code></dt>
 <dd></dd>
 <dt><a href="#debounce">debounce(func, wait, [immediate])</a> ⇒ <code>function</code></dt>
+<dd></dd>
+<dt><a href="#feature">feature(policy, method)</a> ⇒ <code>*</code></dt>
 <dd></dd>
 <dt><a href="#debounce">debounce(regex)</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -795,30 +801,32 @@ now as defined by the system clock.
 
 * [Money](#Money)
     * [new Money(amount, [currency])](#new_Money_new)
-    * [.cents](#Money+cents) ⇒ <code>number</code>
-    * [.dollars](#Money+dollars) ⇒ <code>number</code>
-    * [.currency](#Money+currency) ⇒ <code>number</code>
-    * [.value](#Money+value) ⇒ <code>number</code>
-    * [.nearestWhole](#Money+nearestWhole) ⇒ [<code>Money</code>](#Money)
-    * [.nearestDollar](#Money+nearestDollar) ⇒ [<code>Money</code>](#Money)
-    * [.add(other)](#Money+add) ⇒ [<code>Money</code>](#Money)
-    * [.subtract(other)](#Money+subtract) ⇒ [<code>Money</code>](#Money)
-    * [.multiply(factor)](#Money+multiply) ⇒ [<code>Money</code>](#Money)
-    * [.divide(divisor)](#Money+divide) ⇒ [<code>Money</code>](#Money)
-    * [.equals(other)](#Money+equals) ⇒ <code>boolean</code>
-    * [.isGreaterThan(other)](#Money+isGreaterThan) ⇒ <code>boolean</code>
-    * [.isLessThan(other)](#Money+isLessThan) ⇒ <code>boolean</code>
-    * [.round([to])](#Money+round) ⇒ [<code>Money</code>](#Money)
-    * [.roundDown([to])](#Money+roundDown) ⇒ [<code>Money</code>](#Money)
-    * [.roundUp([to])](#Money+roundUp) ⇒ [<code>Money</code>](#Money)
-    * [.exchange(rate, currency)](#Money+exchange) ⇒ [<code>Money</code>](#Money)
-    * [.isOfCurrency(other)](#Money+isOfCurrency) ⇒ <code>boolean</code>
-    * [.toString([format], [delimiter])](#Money+toString) ⇒ <code>string</code>
-    * [.zero(currency)](#Money+zero) ⇒ [<code>Money</code>](#Money)
-    * [.isMoney(other)](#Money+isMoney) ⇒ <code>boolean</code>
-    * [.canParse(value)](#Money+canParse) ⇒ <code>boolean</code>
-    * [.parse(value)](#Money+parse) ⇒ [<code>Money</code>](#Money)
-    * [.tryParse(value)](#Money+tryParse) ⇒ [<code>Money</code>](#Money)
+    * _instance_
+        * [.cents](#Money+cents) ⇒ <code>number</code>
+        * [.dollars](#Money+dollars) ⇒ <code>number</code>
+        * [.currency](#Money+currency) ⇒ <code>number</code>
+        * [.value](#Money+value) ⇒ <code>number</code>
+        * [.nearestWhole](#Money+nearestWhole) ⇒ [<code>Money</code>](#Money)
+        * [.nearestDollar](#Money+nearestDollar) ⇒ [<code>Money</code>](#Money)
+        * [.add(other)](#Money+add) ⇒ [<code>Money</code>](#Money)
+        * [.subtract(other)](#Money+subtract) ⇒ [<code>Money</code>](#Money)
+        * [.multiply(factor)](#Money+multiply) ⇒ [<code>Money</code>](#Money)
+        * [.divide(divisor)](#Money+divide) ⇒ [<code>Money</code>](#Money)
+        * [.equals(other)](#Money+equals) ⇒ <code>boolean</code>
+        * [.isGreaterThan(other)](#Money+isGreaterThan) ⇒ <code>boolean</code>
+        * [.isLessThan(other)](#Money+isLessThan) ⇒ <code>boolean</code>
+        * [.round([to])](#Money+round) ⇒ [<code>Money</code>](#Money)
+        * [.roundDown([to])](#Money+roundDown) ⇒ [<code>Money</code>](#Money)
+        * [.roundUp([to])](#Money+roundUp) ⇒ [<code>Money</code>](#Money)
+        * [.exchange(rate, currency)](#Money+exchange) ⇒ [<code>Money</code>](#Money)
+        * [.isOfCurrency(other)](#Money+isOfCurrency) ⇒ <code>boolean</code>
+        * [.toString([format], [delimiter])](#Money+toString) ⇒ <code>string</code>
+    * _static_
+        * [.zero(currency)](#Money.zero) ⇒ [<code>Money</code>](#Money)
+        * [.isMoney(other)](#Money.isMoney) ⇒ <code>boolean</code>
+        * [.canParse(value)](#Money.canParse) ⇒ <code>boolean</code>
+        * [.parse(value)](#Money.parse) ⇒ [<code>Money</code>](#Money)
+        * [.tryParse(value)](#Money.tryParse) ⇒ [<code>Money</code>](#Money)
 
 <a name="new_Money_new"></a>
 
@@ -1018,10 +1026,10 @@ passed format, where format follows the following rules:<br/>
 | [format] | <code>string</code> | <code>&quot;d.c2&quot;</code> | format string. |
 | [delimiter] | <code>string</code> |  | a 1000x grouping delimiter. |
 
-<a name="Money+zero"></a>
+<a name="Money.zero"></a>
 
-### money.zero(currency) ⇒ [<code>Money</code>](#Money)
-**Kind**: instance method of [<code>Money</code>](#Money)  
+### Money.zero(currency) ⇒ [<code>Money</code>](#Money)
+**Kind**: static method of [<code>Money</code>](#Money)  
 **Summary**: Returns `Money` with a zero value.  
 **Access**: public  
 
@@ -1029,10 +1037,10 @@ passed format, where format follows the following rules:<br/>
 | --- | --- |
 | currency | <code>string</code> | 
 
-<a name="Money+isMoney"></a>
+<a name="Money.isMoney"></a>
 
-### money.isMoney(other) ⇒ <code>boolean</code>
-**Kind**: instance method of [<code>Money</code>](#Money)  
+### Money.isMoney(other) ⇒ <code>boolean</code>
+**Kind**: static method of [<code>Money</code>](#Money)  
 **Summary**: Returns true if other is an instance of `Money`.  
 **Access**: public  
 
@@ -1040,10 +1048,10 @@ passed format, where format follows the following rules:<br/>
 | --- | --- | --- |
 | other | <code>\*</code> | value to test |
 
-<a name="Money+canParse"></a>
+<a name="Money.canParse"></a>
 
-### money.canParse(value) ⇒ <code>boolean</code>
-**Kind**: instance method of [<code>Money</code>](#Money)  
+### Money.canParse(value) ⇒ <code>boolean</code>
+**Kind**: static method of [<code>Money</code>](#Money)  
 **Summary**: Returns true if value can be parsed to `Money`.  
 **Access**: public  
 
@@ -1051,10 +1059,10 @@ passed format, where format follows the following rules:<br/>
 | --- | --- |
 | value | <code>\*</code> | 
 
-<a name="Money+parse"></a>
+<a name="Money.parse"></a>
 
-### money.parse(value) ⇒ [<code>Money</code>](#Money)
-**Kind**: instance method of [<code>Money</code>](#Money)  
+### Money.parse(value) ⇒ [<code>Money</code>](#Money)
+**Kind**: static method of [<code>Money</code>](#Money)  
 **Summary**: Returns `Money` with value and currency calculated from passed value
 if value can be parsed into `Money`. Otherwise will throw an error.  
 **Access**: public  
@@ -1063,10 +1071,10 @@ if value can be parsed into `Money`. Otherwise will throw an error.
 | --- | --- | --- |
 | value | <code>\*</code> | value to parse to Money |
 
-<a name="Money+tryParse"></a>
+<a name="Money.tryParse"></a>
 
-### money.tryParse(value) ⇒ [<code>Money</code>](#Money)
-**Kind**: instance method of [<code>Money</code>](#Money)  
+### Money.tryParse(value) ⇒ [<code>Money</code>](#Money)
+**Kind**: static method of [<code>Money</code>](#Money)  
 **Summary**: Returns `Money` with value and currency calculated from passed value
 if value can be parsed into `Money`, otherwise null.  
 **Access**: public  
@@ -1420,6 +1428,16 @@ _**Note**: Will return null for values that cannot be parsed._
 ## uuid() ⇒ <code>string</code>
 **Kind**: global function  
 **Summary**: Returns a universally "unique" string.  
+<a name="suid"></a>
+
+## suid() ⇒ <code>symbol</code>
+**Kind**: global function  
+**Summary**: Returns a Symbol with a "unique" description.  
+<a name="suuid"></a>
+
+## suuid() ⇒ <code>symbol</code>
+**Kind**: global function  
+**Summary**: Returns a Sumbol with a universally "unique" description.  
 <a name="round"></a>
 
 ## round(value, toNearest) ⇒ <code>number</code>
@@ -1560,6 +1578,19 @@ or a set value if passed, or zero.
 | func | <code>function</code> | The function to debounce. |
 | wait | <code>number</code> | The time to wait between calls of func. |
 | [immediate] | <code>boolean</code> | True if func should be called immediately. |
+
+<a name="feature"></a>
+
+## feature(policy, method) ⇒ <code>\*</code>
+**Kind**: global function  
+**Summary**: Feature flag that takes a feature policy
+and a method and will call the method IFF the policy
+value is or returns true.  
+
+| Param | Type |
+| --- | --- |
+| policy | <code>boolean</code> \| <code>function</code> \| <code>Promise</code> | 
+| method | <code>function</code> | 
 
 <a name="debounce"></a>
 
