@@ -45,7 +45,7 @@ and upside-down.</p>
 <dd></dd>
 <dt><a href="#write">write(form, data)</a></dt>
 <dd></dd>
-<dt><a href="#encodeBase64">encodeBase64(string)</a> ⇒ <code>string</code></dt>
+<dt><a href="#encodeBase64">encodeBase64(string, [stripPadding])</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#decodeBase64">decodeBase64(string)</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -351,13 +351,14 @@ are the value of these fields.
 
 <a name="encodeBase64"></a>
 
-## encodeBase64(string) ⇒ <code>string</code>
+## encodeBase64(string, [stripPadding]) ⇒ <code>string</code>
 **Kind**: global function  
 **Summary**: Base64 encodes a string.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | string | <code>string</code> | string to encode |
+| [stripPadding] | <code>boolean</code> | return value will have base64 padding characters stripped when true. |
 
 <a name="decodeBase64"></a>
 
