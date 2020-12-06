@@ -61,6 +61,8 @@
 <dd></dd>
 <dt><a href="#suuid">suuid()</a> ⇒ <code>symbol</code></dt>
 <dd></dd>
+<dt><a href="#random">random([min], [max])</a> ⇒ <code>number</code></dt>
+<dd></dd>
 <dt><a href="#round">round(value, toNearest)</a> ⇒ <code>number</code></dt>
 <dd></dd>
 <dt><a href="#roundUp">roundUp(value, toNearest)</a> ⇒ <code>number</code></dt>
@@ -1438,6 +1440,18 @@ _**Note**: Will return null for values that cannot be parsed._
 ## suuid() ⇒ <code>symbol</code>
 **Kind**: global function  
 **Summary**: Returns a Sumbol with a universally "unique" description.  
+<a name="random"></a>
+
+## random([min], [max]) ⇒ <code>number</code>
+**Kind**: global function  
+**Summary**: Returns a random value between 0 and 1 by default. Will
+return a random number between a min an max value if passed.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [min] | <code>number</code> | random number will not precede this value. |
+| [max] | <code>number</code> | random number will not exceed this value. |
+
 <a name="round"></a>
 
 ## round(value, toNearest) ⇒ <code>number</code>
