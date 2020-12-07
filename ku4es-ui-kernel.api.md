@@ -1,37 +1,14 @@
 ## Classes
 
 <dl>
+<dt><a href="#Cookie">Cookie</a></dt>
+<dd></dd>
+<dt><a href="#Dto">Dto</a></dt>
+<dd></dd>
 <dt><a href="#Key">Key</a></dt>
 <dd></dd>
 <dt><a href="#Swipe">Swipe</a></dt>
 <dd></dd>
-</dl>
-
-## Members
-
-<dl>
-<dt><a href="#orientation">orientation</a> ⇒ <code>string</code></dt>
-<dd><p>Returns the current Device orientation which can be
-tested against the available Device orientation
-constants to determine the orientation of the device.</p>
-</dd>
-<dt><a href="#landscapePrimary">landscapePrimary</a> ⇒ <code>string</code></dt>
-<dd><p>Constant to test if device is oriented in landscape.</p>
-</dd>
-<dt><a href="#landscapeSecondary">landscapeSecondary</a> ⇒ <code>string</code></dt>
-<dd><p>Constant to test if device is oriented in landscape
-and upside-down.</p>
-</dd>
-<dt><a href="#portraitPrimary">portraitPrimary</a> ⇒ <code>string</code></dt>
-<dd><p>Constant to test if device is oriented in portrait.</p>
-</dd>
-<dt><a href="#portraitSecondary">portraitSecondary</a> ⇒ <code>string</code></dt>
-<dd><p>Constant to test if device is oriented in portrait
-and upside-down.</p>
-</dd>
-<dt><a href="#isMobile">isMobile</a> ⇒ <code>boolean</code></dt>
-<dd><p>Returns true if device is mobile</p>
-</dd>
 </dl>
 
 ## Functions
@@ -54,6 +31,214 @@ and upside-down.</p>
 <dt><a href="#decodeUtf8">decodeUtf8(string)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 </dl>
+
+<a name="Cookie"></a>
+
+## Cookie
+**Kind**: global class  
+**Summary**: serializes, deserializes, and reads browser cookies.  
+
+* [Cookie](#Cookie)
+    * [.serialize(value, [params])](#Cookie.serialize) ⇒ <code>string</code>
+    * [.deserialize(value)](#Cookie.deserialize) ⇒ <code>\*</code>
+    * [.read(value)](#Cookie.read) ⇒ <code>Object</code>
+
+<a name="Cookie.serialize"></a>
+
+### Cookie.serialize(value, [params]) ⇒ <code>string</code>
+**Kind**: static method of [<code>Cookie</code>](#Cookie)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>Object</code> | Data to be serialized |
+| [params] | <code>Object</code> | Cookie parameters |
+| [params.name] | <code>string</code> | Cookie name |
+| [params.expires] | <code>Date</code> | Cookie expiry date |
+| [params.path] | <code>string</code> | Cookie path |
+| [params.domain] | <code>string</code> | Cookie domain |
+| [params.secure] | <code>boolean</code> | Sets cookie to 'secure' when true |
+
+<a name="Cookie.deserialize"></a>
+
+### Cookie.deserialize(value) ⇒ <code>\*</code>
+**Kind**: static method of [<code>Cookie</code>](#Cookie)  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| value | <code>string</code> | 
+
+<a name="Cookie.read"></a>
+
+### Cookie.read(value) ⇒ <code>Object</code>
+**Kind**: static method of [<code>Cookie</code>](#Cookie)  
+**Summary**: Read data stored in a cookie  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>string</code> | Browser cookie to read. |
+
+<a name="Dto"></a>
+
+## Dto
+**Kind**: global class  
+**Summary**: A powerful data object that can parse and serialize JavaScript
+data into multiple formats: Cookie  
+
+* [Dto](#Dto)
+    * _instance_
+        * [.name](#Dto+name)
+        * [.name](#Dto+name)
+        * [.read(key)](#Dto+read) ⇒ <code>\*</code>
+        * [.remove(key)](#Dto+remove) ⇒ [<code>Dto</code>](#Dto)
+        * [.write(key, value)](#Dto+write) ⇒ [<code>Dto</code>](#Dto)
+        * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
+        * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
+        * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
+        * [.toFormData()](#Dto+toFormData) ⇒ <code>FormData</code>
+        * [.toJson()](#Dto+toJson) ⇒ <code>string</code>
+        * [.toQueryString()](#Dto+toQueryString) ⇒ <code>string</code>
+    * _static_
+        * [.parseFormData(value)](#Dto.parseFormData) ⇒ [<code>Dto</code>](#Dto)
+        * [.parseJson(value)](#Dto.parseJson) ⇒ [<code>Dto</code>](#Dto)
+        * [.parseQueryString(value)](#Dto.parseQueryString) ⇒ [<code>Dto</code>](#Dto)
+        * [.load(name)](#Dto.load) ⇒ [<code>Dto</code>](#Dto)
+
+<a name="Dto+name"></a>
+
+### dto.name
+**Kind**: instance property of [<code>Dto</code>](#Dto)  
+**Access**: public  
+<a name="Dto+name"></a>
+
+### dto.name
+**Kind**: instance property of [<code>Dto</code>](#Dto)  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| value | <code>string</code> | 
+
+<a name="Dto+read"></a>
+
+### dto.read(key) ⇒ <code>\*</code>
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: React value for key  
+**Access**: public  
+
+| Param |
+| --- |
+| key | 
+
+<a name="Dto+remove"></a>
+
+### dto.remove(key) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Remove value at key  
+**Access**: public  
+
+| Param |
+| --- |
+| key | 
+
+<a name="Dto+write"></a>
+
+### dto.write(key, value) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Write value to key  
+**Access**: public  
+
+| Param |
+| --- |
+| key | 
+| value | 
+
+<a name="Dto+save"></a>
+
+### dto.save() ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Persist Dto locally  
+**Access**: public  
+<a name="Dto+saveAs"></a>
+
+### dto.saveAs(name) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Persist Dto locally as name  
+**Access**: public  
+
+| Param |
+| --- |
+| name | 
+
+<a name="Dto+delete"></a>
+
+### dto.delete() ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Delete locally saved Dto  
+**Access**: public  
+<a name="Dto+toFormData"></a>
+
+### dto.toFormData() ⇒ <code>FormData</code>
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Returns Dto as FormData  
+**Access**: public  
+<a name="Dto+toJson"></a>
+
+### dto.toJson() ⇒ <code>string</code>
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Returns Dto as JSON  
+**Access**: public  
+<a name="Dto+toQueryString"></a>
+
+### dto.toQueryString() ⇒ <code>string</code>
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Returns Dto as query string  
+**Access**: public  
+<a name="Dto.parseFormData"></a>
+
+### Dto.parseFormData(value) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Parse a Dto from FormData  
+**Access**: public  
+
+| Param |
+| --- |
+| value | 
+
+<a name="Dto.parseJson"></a>
+
+### Dto.parseJson(value) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Parse a Dto from JSON data  
+**Access**: public  
+
+| Param |
+| --- |
+| value | 
+
+<a name="Dto.parseQueryString"></a>
+
+### Dto.parseQueryString(value) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Parse a Dto from a query string  
+**Access**: public  
+
+| Param |
+| --- |
+| value | 
+
+<a name="Dto.load"></a>
+
+### Dto.load(name) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Load a locally saved Dto by name  
+**Access**: public  
+
+| Param |
+| --- |
+| name | 
 
 <a name="Key"></a>
 
@@ -262,46 +447,6 @@ and upside-down.</p>
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
-<a name="orientation"></a>
-
-## orientation ⇒ <code>string</code>
-Returns the current Device orientation which can be
-tested against the available Device orientation
-constants to determine the orientation of the device.
-
-**Kind**: global variable  
-<a name="landscapePrimary"></a>
-
-## landscapePrimary ⇒ <code>string</code>
-Constant to test if device is oriented in landscape.
-
-**Kind**: global variable  
-<a name="landscapeSecondary"></a>
-
-## landscapeSecondary ⇒ <code>string</code>
-Constant to test if device is oriented in landscape
-and upside-down.
-
-**Kind**: global variable  
-<a name="portraitPrimary"></a>
-
-## portraitPrimary ⇒ <code>string</code>
-Constant to test if device is oriented in portrait.
-
-**Kind**: global variable  
-<a name="portraitSecondary"></a>
-
-## portraitSecondary ⇒ <code>string</code>
-Constant to test if device is oriented in portrait
-and upside-down.
-
-**Kind**: global variable  
-<a name="isMobile"></a>
-
-## isMobile ⇒ <code>boolean</code>
-Returns true if device is mobile
-
-**Kind**: global variable  
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
@@ -395,6 +540,54 @@ are the value of these fields.
 ## .Device
 **Kind**: static class  
 **Summary**: Device abstraction  
+
+* [.Device](#Device)
+    * [.orientation](#Device.orientation) ⇒ <code>string</code>
+    * [.landscapePrimary](#Device.landscapePrimary) ⇒ <code>string</code>
+    * [.landscapeSecondary](#Device.landscapeSecondary) ⇒ <code>string</code>
+    * [.portraitPrimary](#Device.portraitPrimary) ⇒ <code>string</code>
+    * [.portraitSecondary](#Device.portraitSecondary) ⇒ <code>string</code>
+    * [.isMobile](#Device.isMobile) ⇒ <code>boolean</code>
+
+<a name="Device.orientation"></a>
+
+### Device.orientation ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Returns the current Device orientation which can be
+tested against the available Device orientation
+constants to determine the orientation of the device.  
+**Access**: public  
+<a name="Device.landscapePrimary"></a>
+
+### Device.landscapePrimary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in landscape.  
+**Access**: public  
+<a name="Device.landscapeSecondary"></a>
+
+### Device.landscapeSecondary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in landscape.  
+**Access**: public  
+<a name="Device.portraitPrimary"></a>
+
+### Device.portraitPrimary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in portrait.  
+**Access**: public  
+<a name="Device.portraitSecondary"></a>
+
+### Device.portraitSecondary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in portrait
+and upside-down.  
+**Access**: public  
+<a name="Device.isMobile"></a>
+
+### Device.isMobile ⇒ <code>boolean</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Returns true if device is mobile.  
+**Access**: public  
 <a name="Document"></a>
 
 ## .Document
