@@ -14,8 +14,6 @@
 ## Functions
 
 <dl>
-<dt><a href="#onPreventScroll">onPreventScroll(method)</a></dt>
-<dd></dd>
 <dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
 <dd></dd>
 <dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
@@ -449,16 +447,6 @@ data into multiple formats: Cookie
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
-<a name="onPreventScroll"></a>
-
-## onPreventScroll(method)
-**Kind**: global function  
-**Summary**: Adds a method to call when scroll is prevented.  
-
-| Param | Type |
-| --- | --- |
-| method | <code>function</code> | 
-
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
@@ -612,6 +600,7 @@ and upside-down.
     * [.scroll](#Document.scroll) ⇒ <code>Scroll</code>
     * [.preventScroll()](#Document.preventScroll)
     * [.resumeScroll()](#Document.resumeScroll)
+    * [.onPreventScroll(method)](#Document.onPreventScroll)
     * [.onResumeScroll(method)](#Document.onResumeScroll)
     * [.on(event, key, method, options)](#Document.on) ⇒ <code>Object</code>
     * [.onKeyPress(key, method, options)](#Document.onKeyPress) ⇒ <code>Object</code>
@@ -634,7 +623,8 @@ and upside-down.
 
 ### Document.scroll ⇒ <code>Scroll</code>
 **Kind**: static property of [<code>Document</code>](#Document)  
-**Summary**: Gets the Document Scroll instance  
+**Summary**: Gets the Document Scroll instance that can be queried
+to determine scroll direction: left, right, up, down.  
 **Access**: public  
 <a name="Document.preventScroll"></a>
 
@@ -649,6 +639,17 @@ and upside-down.
 **Summary**: Resumes scrollability for document after being
 rendered unscrollable.  
 **Access**: public  
+<a name="Document.onPreventScroll"></a>
+
+### Document.onPreventScroll(method)
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Adds a method to call when scroll is prevented.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| method | <code>function</code> | 
+
 <a name="Document.onResumeScroll"></a>
 
 ### Document.onResumeScroll(method)
