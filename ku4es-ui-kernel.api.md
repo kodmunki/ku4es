@@ -14,6 +14,8 @@
 ## Functions
 
 <dl>
+<dt><a href="#onPreventScroll">onPreventScroll(method)</a></dt>
+<dd></dd>
 <dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
 <dd></dd>
 <dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
@@ -447,6 +449,16 @@ data into multiple formats: Cookie
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
+<a name="onPreventScroll"></a>
+
+## onPreventScroll(method)
+**Kind**: global function  
+**Summary**: Adds a method to call when scroll is prevented.  
+
+| Param | Type |
+| --- | --- |
+| method | <code>function</code> | 
+
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
@@ -595,19 +607,34 @@ and upside-down.
 **Summary**: Document abstraction  
 
 * [.Document](#Document)
+    * [.scrollbarWidth](#Document.scrollbarWidth) ⇒ <code>number</code>
     * [.isScrollPrevented](#Document.isScrollPrevented) ⇒ <code>boolean</code>
+    * [.scroll](#Document.scroll) ⇒ <code>Scroll</code>
     * [.preventScroll()](#Document.preventScroll)
     * [.resumeScroll()](#Document.resumeScroll)
+    * [.onResumeScroll(method)](#Document.onResumeScroll)
     * [.on(event, key, method, options)](#Document.on) ⇒ <code>Object</code>
     * [.onKeyPress(key, method, options)](#Document.onKeyPress) ⇒ <code>Object</code>
     * [.onKeyDown(key, method, options)](#Document.onKeyDown) ⇒ <code>Object</code>
     * [.onKeyUp(key, method, options)](#Document.onKeyUp) ⇒ <code>Object</code>
 
+<a name="Document.scrollbarWidth"></a>
+
+### Document.scrollbarWidth ⇒ <code>number</code>
+**Kind**: static property of [<code>Document</code>](#Document)  
+**Summary**: Width of the scrollbar  
+**Access**: public  
 <a name="Document.isScrollPrevented"></a>
 
 ### Document.isScrollPrevented ⇒ <code>boolean</code>
 **Kind**: static property of [<code>Document</code>](#Document)  
 **Summary**: Returns true if document scrolling is prevented  
+**Access**: public  
+<a name="Document.scroll"></a>
+
+### Document.scroll ⇒ <code>Scroll</code>
+**Kind**: static property of [<code>Document</code>](#Document)  
+**Summary**: Gets the Document Scroll instance  
 **Access**: public  
 <a name="Document.preventScroll"></a>
 
@@ -622,6 +649,17 @@ and upside-down.
 **Summary**: Resumes scrollability for document after being
 rendered unscrollable.  
 **Access**: public  
+<a name="Document.onResumeScroll"></a>
+
+### Document.onResumeScroll(method)
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Adds a method to call when scroll is resumed.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| method | <code>function</code> | 
+
 <a name="Document.on"></a>
 
 ### Document.on(event, key, method, options) ⇒ <code>Object</code>
