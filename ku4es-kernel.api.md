@@ -89,6 +89,8 @@
 <dd></dd>
 <dt><a href="#feature">feature(policy, method)</a> ⇒ <code>*</code></dt>
 <dd></dd>
+<dt><a href="#opt">opt(method, value)</a> ⇒ <code>*</code></dt>
+<dd></dd>
 <dt><a href="#debounce">debounce(regex)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#build">build(rest)</a> ⇒ <code>string</code></dt>
@@ -1605,6 +1607,30 @@ value is or returns true.
 | --- | --- |
 | policy | <code>boolean</code> \| <code>function</code> \| <code>Promise</code> | 
 | method | <code>function</code> | 
+
+<a name="opt"></a>
+
+## opt(method, value) ⇒ <code>\*</code>
+**Kind**: global function  
+**Summary**: returns that return value of the passed method
+or the value if the passed method throws an error.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| method | <code>function</code> | method to execute. |
+| value | <code>\*</code> | Value to return if method fails. |
+
+<a name="opt.async"></a>
+
+### opt.async(method, value) ⇒ <code>\*</code>
+**Kind**: static method of [<code>opt</code>](#opt)  
+**Summary**: returns that return value of the passed method
+or the value if the passed method throws an error.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| method | <code>AsyncFunction</code> \| <code>Promise</code> | method to execute. |
+| value | <code>\*</code> | Value to return if method fails. |
 
 <a name="debounce"></a>
 
