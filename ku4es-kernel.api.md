@@ -95,6 +95,9 @@
 <dd></dd>
 <dt><a href="#build">build(rest)</a> ⇒ <code>string</code></dt>
 <dd></dd>
+<dt><a href="#chunk">chunk(string, size)</a> ⇒ <code>Array.&lt;string&gt;</code></dt>
+<dd><p>/**</p>
+</dd>
 <dt><a href="#format">format(format, rest)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#trim">trim(string)</a> ⇒ <code>string</code></dt>
@@ -1652,6 +1655,19 @@ or the value if the passed method throws an error.
 | Param |
 | --- |
 | rest | 
+
+<a name="chunk"></a>
+
+## chunk(string, size) ⇒ <code>Array.&lt;string&gt;</code>
+/**
+
+**Kind**: global function  
+**Summary**: Returns an array of substring strings of size  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | <code>string</code> | the string value to chunk. |
+| size | <code>number</code> | the size of each chunk. |
 
 <a name="format"></a>
 
