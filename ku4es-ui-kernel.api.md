@@ -14,6 +14,10 @@
 ## Functions
 
 <dl>
+<dt><a href="#encode">encode([stripPadding])</a> ⇒ <code>string</code> | <code>undefined</code></dt>
+<dd></dd>
+<dt><a href="#decode">decode(value, [name])</a> ⇒ <code><a href="#Dto">Dto</a></code></dt>
+<dd></dd>
 <dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
 <dd></dd>
 <dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
@@ -94,6 +98,7 @@ data into multiple formats: Cookie
         * [.read(key)](#Dto+read) ⇒ <code>\*</code>
         * [.remove(key)](#Dto+remove) ⇒ [<code>Dto</code>](#Dto)
         * [.write(key, value)](#Dto+write) ⇒ [<code>Dto</code>](#Dto)
+        * [.update(data)](#Dto+update) ⇒ [<code>Dto</code>](#Dto)
         * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
         * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
         * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
@@ -104,7 +109,7 @@ data into multiple formats: Cookie
         * [.parseFormData(value)](#Dto.parseFormData) ⇒ [<code>Dto</code>](#Dto)
         * [.parseJson(value)](#Dto.parseJson) ⇒ [<code>Dto</code>](#Dto)
         * [.parseQueryString(value)](#Dto.parseQueryString) ⇒ [<code>Dto</code>](#Dto)
-        * [.load(name)](#Dto.load) ⇒ [<code>Dto</code>](#Dto)
+        * [.load(name)](#Dto.load) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
 
 <a name="Dto+name"></a>
 
@@ -125,7 +130,7 @@ data into multiple formats: Cookie
 
 ### dto.read(key) ⇒ <code>\*</code>
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
-**Summary**: React value for key  
+**Summary**: Return value for key  
 **Access**: public  
 
 | Param |
@@ -154,6 +159,17 @@ data into multiple formats: Cookie
 | --- |
 | key | 
 | value | 
+
+<a name="Dto+update"></a>
+
+### dto.update(data) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Update data with passed data  
+**Access**: public  
+
+| Param |
+| --- |
+| data | 
 
 <a name="Dto+save"></a>
 
@@ -231,7 +247,7 @@ data into multiple formats: Cookie
 
 <a name="Dto.load"></a>
 
-### Dto.load(name) ⇒ [<code>Dto</code>](#Dto)
+### Dto.load(name) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
 **Kind**: static method of [<code>Dto</code>](#Dto)  
 **Summary**: Load a locally saved Dto by name  
 **Access**: public  
@@ -447,6 +463,28 @@ data into multiple formats: Cookie
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
+<a name="encode"></a>
+
+## encode([stripPadding]) ⇒ <code>string</code> \| <code>undefined</code>
+**Kind**: global function  
+**Summary**: Returns a base64 encoded string containg the value
+of of this Dto.  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [stripPadding] | <code>boolean</code> | <code>false</code> | Will strip base64 padding when true. |
+
+<a name="decode"></a>
+
+## decode(value, [name]) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: global function  
+**Summary**: Returns a new Dto having value of the passed base64 encoded string.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>string</code> | Initial value for the returned Dto. |
+| [name] | <code>string</code> | Name for the returned Dto. |
+
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
