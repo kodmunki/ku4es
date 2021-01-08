@@ -108,6 +108,7 @@ data into multiple formats: Cookie
     * _static_
         * [.parseFormData(value)](#Dto.parseFormData) ⇒ [<code>Dto</code>](#Dto)
         * [.parseJson(value)](#Dto.parseJson) ⇒ [<code>Dto</code>](#Dto)
+        * [.parseJwt(value)](#Dto.parseJwt) ⇒ <code>any</code>
         * [.parseQueryString(value)](#Dto.parseQueryString) ⇒ [<code>Dto</code>](#Dto)
         * [.load(name)](#Dto.load) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
 
@@ -228,6 +229,17 @@ data into multiple formats: Cookie
 ### Dto.parseJson(value) ⇒ [<code>Dto</code>](#Dto)
 **Kind**: static method of [<code>Dto</code>](#Dto)  
 **Summary**: Parse a Dto from JSON data  
+**Access**: public  
+
+| Param |
+| --- |
+| value | 
+
+<a name="Dto.parseJwt"></a>
+
+### Dto.parseJwt(value) ⇒ <code>any</code>
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Parse a Dto from a JWT  
 **Access**: public  
 
 | Param |
