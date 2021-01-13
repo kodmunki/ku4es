@@ -93,12 +93,14 @@ data into multiple formats: Cookie
 
 * [Dto](#Dto)
     * _instance_
+        * [.value](#Dto+value) ⇒ <code>\*</code> \| <code>Object</code>
+        * [.name](#Dto+name) ⇒ <code>string</code>
         * [.name](#Dto+name)
-        * [.name](#Dto+name)
-        * [.read(key)](#Dto+read) ⇒ <code>\*</code>
+        * [.read([key])](#Dto+read) ⇒ <code>\*</code>
         * [.remove(key)](#Dto+remove) ⇒ [<code>Dto</code>](#Dto)
         * [.write(key, value)](#Dto+write) ⇒ [<code>Dto</code>](#Dto)
         * [.update(data)](#Dto+update) ⇒ [<code>Dto</code>](#Dto)
+        * [.clear()](#Dto+clear) ⇒ [<code>Dto</code>](#Dto)
         * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
         * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
         * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
@@ -112,9 +114,14 @@ data into multiple formats: Cookie
         * [.parseQueryString(value)](#Dto.parseQueryString) ⇒ [<code>Dto</code>](#Dto)
         * [.load(name)](#Dto.load) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
 
+<a name="Dto+value"></a>
+
+### dto.value ⇒ <code>\*</code> \| <code>Object</code>
+**Kind**: instance property of [<code>Dto</code>](#Dto)  
+**Access**: public  
 <a name="Dto+name"></a>
 
-### dto.name
+### dto.name ⇒ <code>string</code>
 **Kind**: instance property of [<code>Dto</code>](#Dto)  
 **Access**: public  
 <a name="Dto+name"></a>
@@ -129,14 +136,14 @@ data into multiple formats: Cookie
 
 <a name="Dto+read"></a>
 
-### dto.read(key) ⇒ <code>\*</code>
+### dto.read([key]) ⇒ <code>\*</code>
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
-**Summary**: Return value for key  
+**Summary**: Return value for key or all values if not passed.  
 **Access**: public  
 
-| Param |
-| --- |
-| key | 
+| Param | Type |
+| --- | --- |
+| [key] | <code>string</code> \| <code>number</code> | 
 
 <a name="Dto+remove"></a>
 
@@ -172,6 +179,13 @@ data into multiple formats: Cookie
 | --- |
 | data | 
 
+<a name="Dto+clear"></a>
+
+### dto.clear() ⇒ [<code>Dto</code>](#Dto)
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Clears all data from this Dto. It does not
+remove this Dto from persistent storage.  
+**Access**: public  
 <a name="Dto+save"></a>
 
 ### dto.save() ⇒ [<code>Dto</code>](#Dto)
