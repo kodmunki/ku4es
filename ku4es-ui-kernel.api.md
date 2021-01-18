@@ -24,10 +24,6 @@
 ## Functions
 
 <dl>
-<dt><a href="#encode">encode([stripPadding], [unsafe])</a> ⇒ <code>string</code> | <code>undefined</code></dt>
-<dd></dd>
-<dt><a href="#decode">decode(value, [name])</a> ⇒ <code><a href="#Dto">Dto</a></code></dt>
-<dd></dd>
 <dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
 <dd></dd>
 <dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
@@ -116,10 +112,12 @@ data into multiple formats: Cookie
         * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
         * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
         * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
+        * [.encode([stripPadding], [unsafe])](#Dto+encode) ⇒ <code>string</code> \| <code>undefined</code>
         * [.toFormData()](#Dto+toFormData) ⇒ <code>FormData</code>
         * [.toJson()](#Dto+toJson) ⇒ <code>string</code>
         * [.toQueryString()](#Dto+toQueryString) ⇒ <code>string</code>
     * _static_
+        * [.decode(value, [name])](#Dto.decode) ⇒ [<code>Dto</code>](#Dto)
         * [.parseFormData(value)](#Dto.parseFormData) ⇒ [<code>Dto</code>](#Dto)
         * [.parseJson(value)](#Dto.parseJson) ⇒ [<code>Dto</code>](#Dto)
         * [.parseJwt(value)](#Dto.parseJwt) ⇒ <code>any</code>
@@ -221,6 +219,19 @@ remove this Dto from persistent storage.
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Delete locally saved Dto  
 **Access**: public  
+<a name="Dto+encode"></a>
+
+### dto.encode([stripPadding], [unsafe]) ⇒ <code>string</code> \| <code>undefined</code>
+**Kind**: instance method of [<code>Dto</code>](#Dto)  
+**Summary**: Returns a base64 encoded string containg the value
+of of this Dto.  
+**Access**: public  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [stripPadding] | <code>boolean</code> | <code>false</code> | Will strip base64 padding when true. |
+| [unsafe] | <code>boolean</code> | <code>false</code> | Will escape special characters when encoding preventing erroneous errors in some cases, but making the value unsafe for transfer and decoding outside of Dto as special characters will have to be unescaped after decoding. |
+
 <a name="Dto+toFormData"></a>
 
 ### dto.toFormData() ⇒ <code>FormData</code>
@@ -239,6 +250,18 @@ remove this Dto from persistent storage.
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Returns Dto as query string  
 **Access**: public  
+<a name="Dto.decode"></a>
+
+### Dto.decode(value, [name]) ⇒ [<code>Dto</code>](#Dto)
+**Kind**: static method of [<code>Dto</code>](#Dto)  
+**Summary**: Returns a new Dto having value of the passed base64 encoded string.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>string</code> | Initial value for the returned Dto. |
+| [name] | <code>string</code> | Name for the returned Dto. |
+
 <a name="Dto.parseFormData"></a>
 
 ### Dto.parseFormData(value) ⇒ [<code>Dto</code>](#Dto)
@@ -793,29 +816,6 @@ unsubscribe target listener from keyboard.
 | Param | Type | Description |
 | --- | --- | --- |
 | name | <code>string</code> | Name of target collection. |
-
-<a name="encode"></a>
-
-## encode([stripPadding], [unsafe]) ⇒ <code>string</code> \| <code>undefined</code>
-**Kind**: global function  
-**Summary**: Returns a base64 encoded string containg the value
-of of this Dto.  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| [stripPadding] | <code>boolean</code> | <code>false</code> | Will strip base64 padding when true. |
-| [unsafe] | <code>boolean</code> | <code>false</code> | Will escape special characters when encoding preventing erroneous errors in some cases, but making the value unsafe for transfer and decoding outside of Dto as special characters will have to be unescaped after decoding. |
-
-<a name="decode"></a>
-
-## decode(value, [name]) ⇒ [<code>Dto</code>](#Dto)
-**Kind**: global function  
-**Summary**: Returns a new Dto having value of the passed base64 encoded string.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value | <code>string</code> | Initial value for the returned Dto. |
-| [name] | <code>string</code> | Name for the returned Dto. |
 
 <a name="readData"></a>
 
