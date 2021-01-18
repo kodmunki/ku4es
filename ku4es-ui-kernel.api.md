@@ -5,9 +5,19 @@
 <dd></dd>
 <dt><a href="#Dto">Dto</a></dt>
 <dd></dd>
+<dt><a href="#Device">Device</a></dt>
+<dd></dd>
+<dt><a href="#Document">Document</a></dt>
+<dd></dd>
+<dt><a href="#Event">Event</a></dt>
+<dd></dd>
 <dt><a href="#Key">Key</a></dt>
 <dd></dd>
+<dt><a href="#Keyboard">Keyboard</a></dt>
+<dd></dd>
 <dt><a href="#Swipe">Swipe</a></dt>
+<dd></dd>
+<dt><a href="#Store">Store</a></dt>
 <dd></dd>
 </dl>
 
@@ -26,13 +36,7 @@
 <dd></dd>
 <dt><a href="#write">write(form, data)</a></dt>
 <dd></dd>
-<dt><a href="#write">write(name, data)</a> ⇒ <code>Promise.&lt;*&gt;</code></dt>
-<dd></dd>
-<dt><a href="#remove">remove(name)</a> ⇒ <code>Promise.&lt;*&gt;</code></dt>
-<dd></dd>
-<dt><a href="#save">save()</a> ⇒ <code>Promise.&lt;*&gt;</code></dt>
-<dd></dd>
-<dt><a href="#delete">delete(name)</a> ⇒ <code>Promise.&lt;*&gt;</code></dt>
+<dt><a href="#thread">thread(func)</a> ⇒ <code>Worker</code></dt>
 <dd></dd>
 <dt><a href="#encodeBase64">encodeBase64(string, [stripPadding])</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -290,6 +294,209 @@ remove this Dto from persistent storage.
 | --- |
 | name | 
 
+<a name="Device"></a>
+
+## Device
+**Kind**: global class  
+**Summary**: Device abstraction  
+
+* [Device](#Device)
+    * [.orientation](#Device.orientation) ⇒ <code>string</code>
+    * [.landscapePrimary](#Device.landscapePrimary) ⇒ <code>string</code>
+    * [.landscapeSecondary](#Device.landscapeSecondary) ⇒ <code>string</code>
+    * [.portraitPrimary](#Device.portraitPrimary) ⇒ <code>string</code>
+    * [.portraitSecondary](#Device.portraitSecondary) ⇒ <code>string</code>
+    * [.isMobile](#Device.isMobile) ⇒ <code>boolean</code>
+
+<a name="Device.orientation"></a>
+
+### Device.orientation ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Returns the current Device orientation which can be
+tested against the available Device orientation
+constants to determine the orientation of the device.  
+**Access**: public  
+<a name="Device.landscapePrimary"></a>
+
+### Device.landscapePrimary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in landscape.  
+**Access**: public  
+<a name="Device.landscapeSecondary"></a>
+
+### Device.landscapeSecondary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in landscape.  
+**Access**: public  
+<a name="Device.portraitPrimary"></a>
+
+### Device.portraitPrimary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in portrait.  
+**Access**: public  
+<a name="Device.portraitSecondary"></a>
+
+### Device.portraitSecondary ⇒ <code>string</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Constant to test if device is oriented in portrait
+and upside-down.  
+**Access**: public  
+<a name="Device.isMobile"></a>
+
+### Device.isMobile ⇒ <code>boolean</code>
+**Kind**: static property of [<code>Device</code>](#Device)  
+**Summary**: Returns true if device is mobile.  
+**Access**: public  
+<a name="Document"></a>
+
+## Document
+**Kind**: global class  
+**Summary**: Document abstraction  
+
+* [Document](#Document)
+    * [.scrollbarWidth](#Document.scrollbarWidth) ⇒ <code>number</code>
+    * [.isScrollPrevented](#Document.isScrollPrevented) ⇒ <code>boolean</code>
+    * [.scroll](#Document.scroll) ⇒ <code>Scroll</code>
+    * [.preventScroll()](#Document.preventScroll)
+    * [.resumeScroll()](#Document.resumeScroll)
+    * [.onPreventScroll(method)](#Document.onPreventScroll)
+    * [.onResumeScroll(method)](#Document.onResumeScroll)
+    * [.on(event, key, method, options)](#Document.on) ⇒ <code>Object</code>
+    * [.onKeyPress(key, method, options)](#Document.onKeyPress) ⇒ <code>Object</code>
+    * [.onKeyDown(key, method, options)](#Document.onKeyDown) ⇒ <code>Object</code>
+    * [.onKeyUp(key, method, options)](#Document.onKeyUp) ⇒ <code>Object</code>
+
+<a name="Document.scrollbarWidth"></a>
+
+### Document.scrollbarWidth ⇒ <code>number</code>
+**Kind**: static property of [<code>Document</code>](#Document)  
+**Summary**: Width of the scrollbar  
+**Access**: public  
+<a name="Document.isScrollPrevented"></a>
+
+### Document.isScrollPrevented ⇒ <code>boolean</code>
+**Kind**: static property of [<code>Document</code>](#Document)  
+**Summary**: Returns true if document scrolling is prevented  
+**Access**: public  
+<a name="Document.scroll"></a>
+
+### Document.scroll ⇒ <code>Scroll</code>
+**Kind**: static property of [<code>Document</code>](#Document)  
+**Summary**: Gets the Document Scroll instance that can be queried
+to determine scroll direction: left, right, up, down.  
+**Access**: public  
+<a name="Document.preventScroll"></a>
+
+### Document.preventScroll()
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Prevents document from being scrollable  
+**Access**: public  
+<a name="Document.resumeScroll"></a>
+
+### Document.resumeScroll()
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Resumes scrollability for document after being
+rendered unscrollable.  
+**Access**: public  
+<a name="Document.onPreventScroll"></a>
+
+### Document.onPreventScroll(method)
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Adds a method to call when scroll is prevented.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| method | <code>function</code> | 
+
+<a name="Document.onResumeScroll"></a>
+
+### Document.onResumeScroll(method)
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Adds a method to call when scroll is resumed.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| method | <code>function</code> | 
+
+<a name="Document.on"></a>
+
+### Document.on(event, key, method, options) ⇒ <code>Object</code>
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Subscribes to keyboard event  
+**Returns**: <code>Object</code> - - method to call to
+unsubscribe target listener from keyboard.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| event |  | 
+| key | [<code>Key</code>](#Key) | 
+| method | <code>function</code> | 
+| options | <code>Object</code> | 
+
+<a name="Document.onKeyPress"></a>
+
+### Document.onKeyPress(key, method, options) ⇒ <code>Object</code>
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Subscribes to keyboard keypress event  
+**Returns**: <code>Object</code> - - method to call to
+unsubscribe target listener from keyboard.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| key | [<code>Key</code>](#Key) | 
+| method | <code>function</code> | 
+| options | <code>Object</code> | 
+
+<a name="Document.onKeyDown"></a>
+
+### Document.onKeyDown(key, method, options) ⇒ <code>Object</code>
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Subscribes to keyboard keydown event  
+**Returns**: <code>Object</code> - - method to call to
+unsubscribe target listener from keyboard.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| key | [<code>Key</code>](#Key) | 
+| method | <code>function</code> | 
+| options | <code>Object</code> | 
+
+<a name="Document.onKeyUp"></a>
+
+### Document.onKeyUp(key, method, options) ⇒ <code>Object</code>
+**Kind**: static method of [<code>Document</code>](#Document)  
+**Summary**: Subscribes to keyboard keyup event  
+**Returns**: <code>Object</code> - - method to call to
+unsubscribe target listener from keyboard.  
+**Access**: public  
+
+| Param | Type |
+| --- | --- |
+| key | [<code>Key</code>](#Key) | 
+| method | <code>function</code> | 
+| options | <code>Object</code> | 
+
+<a name="Event"></a>
+
+## Event
+**Kind**: global class  
+**Summary**: Event abstraction  
+<a name="Event.mute"></a>
+
+### Event.mute(event) ⇒ <code>boolean</code>
+**Kind**: static method of [<code>Event</code>](#Event)  
+**Summary**: Hard stops any further activity from passed event.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| event | [<code>Event</code>](#Event) | Event to hard stop. |
+
 <a name="Key"></a>
 
 ## Key
@@ -436,6 +643,11 @@ remove this Dto from persistent storage.
 **Kind**: static property of [<code>Key</code>](#Key)  
 **Summary**: Returns Key, Right Arrow.  
 **Access**: public  
+<a name="Keyboard"></a>
+
+## Keyboard
+**Kind**: global class  
+**Summary**: a global keyboard abstraction  
 <a name="Swipe"></a>
 
 ## Swipe
@@ -497,6 +709,91 @@ remove this Dto from persistent storage.
 **Kind**: instance method of [<code>Swipe</code>](#Swipe)  
 **Summary**: Clean up all potential memory leaks.  
 **Access**: public  
+<a name="Store"></a>
+
+## Store
+**Kind**: global class  
+**Summary**: Global persistent data store.  
+
+* [Store](#Store)
+    * [.connected](#Store.connected)
+    * [.connect()](#Store.connect)
+    * [.disconnect()](#Store.disconnect)
+    * [.read(name)](#Store.read) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.write(name, data)](#Store.write) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.remove(name)](#Store.remove) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.save()](#Store.save) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.delete(name)](#Store.delete) ⇒ <code>Promise.&lt;\*&gt;</code>
+
+<a name="Store.connected"></a>
+
+### Store.connected
+**Kind**: static property of [<code>Store</code>](#Store)  
+**Summary**: Returns true when Store is connected to data store.  
+**Access**: public  
+<a name="Store.connect"></a>
+
+### Store.connect()
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Connect Store to data store.  
+**Access**: public  
+<a name="Store.disconnect"></a>
+
+### Store.disconnect()
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Disconnect Store from data store.  
+**Access**: public  
+<a name="Store.read"></a>
+
+### Store.read(name) ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Read data from collection with name.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | Name of target collection. |
+
+<a name="Store.write"></a>
+
+### Store.write(name, data) ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Write data to the collection with name.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | Name of target collection. |
+| data | <code>\*</code> | Data to write to collection |
+
+<a name="Store.remove"></a>
+
+### Store.remove(name) ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Remove collection with name.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | Name of target collection. |
+
+<a name="Store.save"></a>
+
+### Store.save() ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Save Store.  
+**Access**: public  
+<a name="Store.delete"></a>
+
+### Store.delete(name) ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Delete collection with name.  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | Name of target collection. |
+
 <a name="encode"></a>
 
 ## encode([stripPadding], [unsafe]) ⇒ <code>string</code> \| <code>undefined</code>
@@ -567,45 +864,15 @@ are the value of these fields.
 | form | <code>HTMLFormElement</code> | the form to write to. |
 | data | <code>Object</code> |  |
 
-<a name="write"></a>
+<a name="thread"></a>
 
-## write(name, data) ⇒ <code>Promise.&lt;\*&gt;</code>
+## thread(func) ⇒ <code>Worker</code>
 **Kind**: global function  
-**Summary**: Write data to the collection with name  
-**Access**: public  
+**Summary**: Returns a new Worker that runs the logic of the passed function.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
-| data | <code>\*</code> | Data to write to collection |
-
-<a name="remove"></a>
-
-## remove(name) ⇒ <code>Promise.&lt;\*&gt;</code>
-**Kind**: global function  
-**Summary**: Remove collection with name.  
-**Access**: public  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
-
-<a name="save"></a>
-
-## save() ⇒ <code>Promise.&lt;\*&gt;</code>
-**Kind**: global function  
-**Summary**: Save Store  
-**Access**: public  
-<a name="delete"></a>
-
-## delete(name) ⇒ <code>Promise.&lt;\*&gt;</code>
-**Kind**: global function  
-**Summary**: Delete collection with name.  
-**Access**: public  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
+| func | <code>function</code> | Function containing the logic to be run in the Worker. |
 
 <a name="encodeBase64"></a>
 
@@ -647,207 +914,4 @@ are the value of these fields.
 | Param | Type | Description |
 | --- | --- | --- |
 | string | <code>string</code> | string to decode. |
-
-<a name="Device"></a>
-
-## .Device
-**Kind**: static class  
-**Summary**: Device abstraction  
-
-* [.Device](#Device)
-    * [.orientation](#Device.orientation) ⇒ <code>string</code>
-    * [.landscapePrimary](#Device.landscapePrimary) ⇒ <code>string</code>
-    * [.landscapeSecondary](#Device.landscapeSecondary) ⇒ <code>string</code>
-    * [.portraitPrimary](#Device.portraitPrimary) ⇒ <code>string</code>
-    * [.portraitSecondary](#Device.portraitSecondary) ⇒ <code>string</code>
-    * [.isMobile](#Device.isMobile) ⇒ <code>boolean</code>
-
-<a name="Device.orientation"></a>
-
-### Device.orientation ⇒ <code>string</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Returns the current Device orientation which can be
-tested against the available Device orientation
-constants to determine the orientation of the device.  
-**Access**: public  
-<a name="Device.landscapePrimary"></a>
-
-### Device.landscapePrimary ⇒ <code>string</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Constant to test if device is oriented in landscape.  
-**Access**: public  
-<a name="Device.landscapeSecondary"></a>
-
-### Device.landscapeSecondary ⇒ <code>string</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Constant to test if device is oriented in landscape.  
-**Access**: public  
-<a name="Device.portraitPrimary"></a>
-
-### Device.portraitPrimary ⇒ <code>string</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Constant to test if device is oriented in portrait.  
-**Access**: public  
-<a name="Device.portraitSecondary"></a>
-
-### Device.portraitSecondary ⇒ <code>string</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Constant to test if device is oriented in portrait
-and upside-down.  
-**Access**: public  
-<a name="Device.isMobile"></a>
-
-### Device.isMobile ⇒ <code>boolean</code>
-**Kind**: static property of [<code>Device</code>](#Device)  
-**Summary**: Returns true if device is mobile.  
-**Access**: public  
-<a name="Document"></a>
-
-## .Document
-**Kind**: static class  
-**Summary**: Document abstraction  
-
-* [.Document](#Document)
-    * [.scrollbarWidth](#Document.scrollbarWidth) ⇒ <code>number</code>
-    * [.isScrollPrevented](#Document.isScrollPrevented) ⇒ <code>boolean</code>
-    * [.scroll](#Document.scroll) ⇒ <code>Scroll</code>
-    * [.preventScroll()](#Document.preventScroll)
-    * [.resumeScroll()](#Document.resumeScroll)
-    * [.onPreventScroll(method)](#Document.onPreventScroll)
-    * [.onResumeScroll(method)](#Document.onResumeScroll)
-    * [.on(event, key, method, options)](#Document.on) ⇒ <code>Object</code>
-    * [.onKeyPress(key, method, options)](#Document.onKeyPress) ⇒ <code>Object</code>
-    * [.onKeyDown(key, method, options)](#Document.onKeyDown) ⇒ <code>Object</code>
-    * [.onKeyUp(key, method, options)](#Document.onKeyUp) ⇒ <code>Object</code>
-
-<a name="Document.scrollbarWidth"></a>
-
-### Document.scrollbarWidth ⇒ <code>number</code>
-**Kind**: static property of [<code>Document</code>](#Document)  
-**Summary**: Width of the scrollbar  
-**Access**: public  
-<a name="Document.isScrollPrevented"></a>
-
-### Document.isScrollPrevented ⇒ <code>boolean</code>
-**Kind**: static property of [<code>Document</code>](#Document)  
-**Summary**: Returns true if document scrolling is prevented  
-**Access**: public  
-<a name="Document.scroll"></a>
-
-### Document.scroll ⇒ <code>Scroll</code>
-**Kind**: static property of [<code>Document</code>](#Document)  
-**Summary**: Gets the Document Scroll instance that can be queried
-to determine scroll direction: left, right, up, down.  
-**Access**: public  
-<a name="Document.preventScroll"></a>
-
-### Document.preventScroll()
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Prevents document from being scrollable  
-**Access**: public  
-<a name="Document.resumeScroll"></a>
-
-### Document.resumeScroll()
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Resumes scrollability for document after being
-rendered unscrollable.  
-**Access**: public  
-<a name="Document.onPreventScroll"></a>
-
-### Document.onPreventScroll(method)
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Adds a method to call when scroll is prevented.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| method | <code>function</code> | 
-
-<a name="Document.onResumeScroll"></a>
-
-### Document.onResumeScroll(method)
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Adds a method to call when scroll is resumed.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| method | <code>function</code> | 
-
-<a name="Document.on"></a>
-
-### Document.on(event, key, method, options) ⇒ <code>Object</code>
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Subscribes to keyboard event  
-**Returns**: <code>Object</code> - - method to call to
-unsubscribe target listener from keyboard.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| event |  | 
-| key | [<code>Key</code>](#Key) | 
-| method | <code>function</code> | 
-| options | <code>Object</code> | 
-
-<a name="Document.onKeyPress"></a>
-
-### Document.onKeyPress(key, method, options) ⇒ <code>Object</code>
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Subscribes to keyboard keypress event  
-**Returns**: <code>Object</code> - - method to call to
-unsubscribe target listener from keyboard.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| key | [<code>Key</code>](#Key) | 
-| method | <code>function</code> | 
-| options | <code>Object</code> | 
-
-<a name="Document.onKeyDown"></a>
-
-### Document.onKeyDown(key, method, options) ⇒ <code>Object</code>
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Subscribes to keyboard keydown event  
-**Returns**: <code>Object</code> - - method to call to
-unsubscribe target listener from keyboard.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| key | [<code>Key</code>](#Key) | 
-| method | <code>function</code> | 
-| options | <code>Object</code> | 
-
-<a name="Document.onKeyUp"></a>
-
-### Document.onKeyUp(key, method, options) ⇒ <code>Object</code>
-**Kind**: static method of [<code>Document</code>](#Document)  
-**Summary**: Subscribes to keyboard keyup event  
-**Returns**: <code>Object</code> - - method to call to
-unsubscribe target listener from keyboard.  
-**Access**: public  
-
-| Param | Type |
-| --- | --- |
-| key | [<code>Key</code>](#Key) | 
-| method | <code>function</code> | 
-| options | <code>Object</code> | 
-
-<a name="Event"></a>
-
-## .Event
-**Kind**: static class  
-**Summary**: Event abstraction  
-<a name="Event.mute"></a>
-
-### Event.mute(event) ⇒ <code>boolean</code>
-**Kind**: static method of [<code>Event</code>](#Event)  
-**Summary**: Hard stops any further activity from passed event.  
-**Access**: public  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| event | [<code>Event</code>](#Event) | Event to hard stop. |
 
