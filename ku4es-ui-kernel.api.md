@@ -747,6 +747,8 @@ unsubscribe target listener from keyboard.
     * [.remove(name)](#Store.remove) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.save()](#Store.save) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.delete(name)](#Store.delete) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.estimate()](#Store.estimate) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.saved()](#Store.saved) ⇒ <code>Promise.&lt;\*&gt;</code>
 
 <a name="Store.connected"></a>
 
@@ -804,7 +806,7 @@ unsubscribe target listener from keyboard.
 
 ### Store.save() ⇒ <code>Promise.&lt;\*&gt;</code>
 **Kind**: static method of [<code>Store</code>](#Store)  
-**Summary**: Save Store.  
+**Summary**: Save Store (Requires secure connection, i.e. HTTPS)  
 **Access**: public  
 <a name="Store.delete"></a>
 
@@ -817,6 +819,18 @@ unsubscribe target listener from keyboard.
 | --- | --- | --- |
 | name | <code>string</code> | Name of target collection. |
 
+<a name="Store.estimate"></a>
+
+### Store.estimate() ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Storage estimates.  
+**Access**: public  
+<a name="Store.saved"></a>
+
+### Store.saved() ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: True if the Store is saved.  
+**Access**: public  
 <a name="readData"></a>
 
 ## readData(form) ⇒ <code>FormData</code>
