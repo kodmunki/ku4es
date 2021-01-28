@@ -745,8 +745,8 @@ unsubscribe target listener from keyboard.
     * [.read(name)](#Store.read) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.write(name, data)](#Store.write) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.remove(name)](#Store.remove) ⇒ <code>Promise.&lt;\*&gt;</code>
-    * [.save()](#Store.save) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.delete(name)](#Store.delete) ⇒ <code>Promise.&lt;\*&gt;</code>
+    * [.save()](#Store.save) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.estimate()](#Store.estimate) ⇒ <code>Promise.&lt;\*&gt;</code>
     * [.saved()](#Store.saved) ⇒ <code>Promise.&lt;\*&gt;</code>
 
@@ -802,12 +802,6 @@ unsubscribe target listener from keyboard.
 | --- | --- | --- |
 | name | <code>string</code> | Name of target collection. |
 
-<a name="Store.save"></a>
-
-### Store.save() ⇒ <code>Promise.&lt;\*&gt;</code>
-**Kind**: static method of [<code>Store</code>](#Store)  
-**Summary**: Save Store (Requires secure connection, i.e. HTTPS)  
-**Access**: public  
 <a name="Store.delete"></a>
 
 ### Store.delete(name) ⇒ <code>Promise.&lt;\*&gt;</code>
@@ -819,6 +813,12 @@ unsubscribe target listener from keyboard.
 | --- | --- | --- |
 | name | <code>string</code> | Name of target collection. |
 
+<a name="Store.save"></a>
+
+### Store.save() ⇒ <code>Promise.&lt;\*&gt;</code>
+**Kind**: static method of [<code>Store</code>](#Store)  
+**Summary**: Save Store (Requires secure connection, i.e. HTTPS)  
+**Access**: public  
 <a name="Store.estimate"></a>
 
 ### Store.estimate() ⇒ <code>Promise.&lt;\*&gt;</code>
