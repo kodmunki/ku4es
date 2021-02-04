@@ -97,7 +97,7 @@
 ## Dto
 **Kind**: global class  
 **Summary**: A powerful data object that can parse and serialize JavaScript
-data into multiple formats: Cookie  
+data into multiple formats: JSON, Query String, Form Data, JWT, base64.  
 
 * [Dto](#Dto)
     * _instance_
