@@ -162,9 +162,9 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 **Summary**: Remove value at key  
 **Access**: public  
 
-| Param |
-| --- |
-| key | 
+| Param | Type |
+| --- | --- |
+| key | <code>string</code> \| <code>function</code> | 
 
 <a name="Dto+write"></a>
 
