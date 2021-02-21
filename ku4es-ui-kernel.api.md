@@ -32,7 +32,7 @@
 <dd></dd>
 <dt><a href="#write">write(form, data)</a></dt>
 <dd></dd>
-<dt><a href="#thread">thread(func)</a> ⇒ <code>Worker</code></dt>
+<dt><a href="#worker">worker(func)</a> ⇒ <code>Worker</code></dt>
 <dd></dd>
 <dt><a href="#encodeBase64">encodeBase64(string, [stripPadding])</a> ⇒ <code>string</code></dt>
 <dd></dd>
@@ -878,9 +878,9 @@ are the value of these fields.
 | form | <code>HTMLFormElement</code> | the form to write to. |
 | data | <code>Object</code> |  |
 
-<a name="thread"></a>
+<a name="worker"></a>
 
-## thread(func) ⇒ <code>Worker</code>
+## worker(func) ⇒ <code>Worker</code>
 **Kind**: global function  
 **Summary**: Returns a new Worker that runs the logic of the passed function.  
 
