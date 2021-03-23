@@ -19,32 +19,14 @@
 <dd></dd>
 </dl>
 
-## Constants
+## Objects
 
 <dl>
-<dt><a href="#escape">escape</a> ⇒ <code>string</code></dt>
+<dt><a href="#math">math</a> : <code>object</code></dt>
 <dd></dd>
-<dt><a href="#alpha">alpha</a> : <code>RegExp</code></dt>
+<dt><a href="#regex">regex</a> : <code>object</code></dt>
 <dd></dd>
-<dt><a href="#alphaNumeric">alphaNumeric</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#base64">base64</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#dataUrl">dataUrl</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#email">email</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#empty">empty</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#numeric">numeric</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#script">script</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#uid">uid</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#url">url</a> : <code>RegExp</code></dt>
-<dd></dd>
-<dt><a href="#uuid">uuid</a> : <code>RegExp</code></dt>
+<dt><a href="#string">string</a> : <code>object</code></dt>
 <dd></dd>
 </dl>
 
@@ -53,64 +35,11 @@
 <dl>
 <dt><a href="#deduplicate">deduplicate(array)</a> ⇒ <code>Array</code></dt>
 <dd></dd>
-<dt><a href="#uid">uid()</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#uuid">uuid()</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#suid">suid()</a> ⇒ <code>symbol</code></dt>
-<dd></dd>
-<dt><a href="#suuid">suuid()</a> ⇒ <code>symbol</code></dt>
-<dd></dd>
-<dt><a href="#random">random([min], [max])</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#round">round(value, toNearest)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#roundUp">roundUp(value, toNearest)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#roundDown">roundDown(value, toNearest)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#roundTowardZero">roundTowardZero(value, toNearest)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#gcd">gcd(a, b)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#fib">fib(n)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#fib2">fib2(n)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#fibArray">fibArray(n)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#fibArray2">fibArray2(n)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#tryParseInt">tryParseInt(value, valueIfNan)</a> ⇒ <code>number</code></dt>
-<dd></dd>
-<dt><a href="#tryParseFloat">tryParseFloat(value, valueIfNan)</a> ⇒ <code>number</code></dt>
-<dd></dd>
 <dt><a href="#debounce">debounce(func, wait, [immediate])</a> ⇒ <code>function</code></dt>
 <dd></dd>
 <dt><a href="#feature">feature(policy, method)</a> ⇒ <code>*</code></dt>
 <dd></dd>
 <dt><a href="#opt">opt(method, value)</a> ⇒ <code>*</code></dt>
-<dd></dd>
-<dt><a href="#debounce">debounce(regex)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#build">build(rest)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#chunk">chunk(string, size)</a> ⇒ <code>Array.&lt;string&gt;</code></dt>
-<dd><p>/**</p>
-</dd>
-<dt><a href="#format">format(format, rest)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#trim">trim(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#trimStart">trimStart(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#trimEnd">trimEnd(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#capitalize">capitalize(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#mask">mask(string, template, [char])</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#unmask">unmask(string, template, [char])</a> ⇒ <code>string</code></dt>
 <dd></dd>
 <dt><a href="#nextTick">nextTick(func)</a> ⇒ <code>number</code></dt>
 <dd></dd>
@@ -379,13 +308,13 @@ Function where you may be expecting either.
 
 * [Name](#Name)
     * [new Name(first, middle, last)](#new_Name_new)
-    * [.first](#Name+first) ⇒ <code>string</code>
-    * [.middle](#Name+middle) ⇒ <code>string</code>
-    * [.last](#Name+last) ⇒ <code>string</code>
-    * [.full](#Name+full) ⇒ <code>string</code>
-    * [.initials](#Name+initials) ⇒ <code>string</code>
+    * [.first](#Name+first) ⇒ [<code>string</code>](#string)
+    * [.middle](#Name+middle) ⇒ [<code>string</code>](#string)
+    * [.last](#Name+last) ⇒ [<code>string</code>](#string)
+    * [.full](#Name+full) ⇒ [<code>string</code>](#string)
+    * [.initials](#Name+initials) ⇒ [<code>string</code>](#string)
     * [.equals(other)](#Name+equals) ⇒ <code>boolean</code>
-    * [.toString([format])](#Name+toString) ⇒ <code>string</code>
+    * [.toString([format])](#Name+toString) ⇒ [<code>string</code>](#string)
 
 <a name="new_Name_new"></a>
 
@@ -393,37 +322,37 @@ Function where you may be expecting either.
 
 | Param | Type |
 | --- | --- |
-| first | <code>string</code> | 
-| middle | <code>string</code> | 
-| last | <code>string</code> | 
+| first | [<code>string</code>](#string) | 
+| middle | [<code>string</code>](#string) | 
+| last | [<code>string</code>](#string) | 
 
 <a name="Name+first"></a>
 
-### name.first ⇒ <code>string</code>
+### name.first ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Name</code>](#Name)  
 **Summary**: First name.  
 **Access**: public  
 <a name="Name+middle"></a>
 
-### name.middle ⇒ <code>string</code>
+### name.middle ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Name</code>](#Name)  
 **Summary**: Middle name.  
 **Access**: public  
 <a name="Name+last"></a>
 
-### name.last ⇒ <code>string</code>
+### name.last ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Name</code>](#Name)  
 **Summary**: Last name.  
 **Access**: public  
 <a name="Name+full"></a>
 
-### name.full ⇒ <code>string</code>
+### name.full ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Name</code>](#Name)  
 **Summary**: Space delimited first, [middle] and last name.  
 **Access**: public  
 <a name="Name+initials"></a>
 
-### name.initials ⇒ <code>string</code>
+### name.initials ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Name</code>](#Name)  
 **Summary**: Initials delimited by '.'.  
 **Access**: public  
@@ -440,13 +369,13 @@ Function where you may be expecting either.
 
 <a name="Name+toString"></a>
 
-### name.toString([format]) ⇒ <code>string</code>
+### name.toString([format]) ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>Name</code>](#Name)  
 **Access**: public  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [format] | <code>string</code> | An optional format that can include: F, M, L, f, m, l where F, M, L represent the first, middle, and last name values respectively, and f, m, l represent the first initial, middle initial, and last initial respectively.<br/> _**Example**: `new Name('John', 'Bob', 'Doe').toString('F m. L')` === `'John B. Doe'`_ |
+| [format] | [<code>string</code>](#string) | An optional format that can include: F, M, L, f, m, l where F, M, L represent the first, middle, and last name values respectively, and f, m, l represent the first initial, middle initial, and last initial respectively.<br/> _**Example**: `new Name('John', 'Bob', 'Doe').toString('F m. L')` === `'John B. Doe'`_ |
 
 <a name="Rolodex"></a>
 
@@ -553,9 +482,9 @@ to the last index if at the zero index and return that value.
         * [.isBefore(other)](#DayPoint+isBefore) ⇒ <code>boolean</code>
         * [.isAfter(other)](#DayPoint+isAfter) ⇒ <code>boolean</code>
         * [.equals(other)](#DayPoint+equals) ⇒ <code>boolean</code>
-        * [.toString(formatString)](#DayPoint+toString) ⇒ <code>string</code>
+        * [.toString(formatString)](#DayPoint+toString) ⇒ [<code>string</code>](#string)
         * [.toDate()](#DayPoint+toDate) ⇒ <code>Date</code>
-        * [.toJson()](#DayPoint+toJson) ⇒ <code>string</code>
+        * [.toJson()](#DayPoint+toJson) ⇒ [<code>string</code>](#string)
     * _static_
         * [.today](#DayPoint.today) ⇒ [<code>DayPoint</code>](#DayPoint)
         * [.canParse(value)](#DayPoint.canParse) ⇒ <code>boolean</code>
@@ -727,14 +656,14 @@ _**Warning**: This method will error when navigating to previous years that do n
 
 <a name="DayPoint+toString"></a>
 
-### dayPoint.toString(formatString) ⇒ <code>string</code>
+### dayPoint.toString(formatString) ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>DayPoint</code>](#DayPoint)  
 **Summary**: Returns a date string formatted per the passed format string.  
 **Access**: public  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| formatString | <code>string</code> | <code>&quot;mm/dd/yyyy&quot;</code> | format string where m = month, d = date, y = year.<br/> _**Example**: For date, January, 12, 2018, `'mm/dd/yy' -> '01/12/18'` & `'dd/mm/yyyy' -> '12/01/2018'`._ |
+| formatString | [<code>string</code>](#string) | <code>&quot;mm/dd/yyyy&quot;</code> | format string where m = month, d = date, y = year.<br/> _**Example**: For date, January, 12, 2018, `'mm/dd/yy' -> '01/12/18'` & `'dd/mm/yyyy' -> '12/01/2018'`._ |
 
 <a name="DayPoint+toDate"></a>
 
@@ -744,7 +673,7 @@ _**Warning**: This method will error when navigating to previous years that do n
 **Access**: public  
 <a name="DayPoint+toJson"></a>
 
-### dayPoint.toJson() ⇒ <code>string</code>
+### dayPoint.toJson() ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>DayPoint</code>](#DayPoint)  
 **Summary**: Returns a JSON string value of this.  
 **Access**: public  
@@ -763,7 +692,7 @@ _**Warning**: This method will error when navigating to previous years that do n
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | A string value to test. |
+| value | [<code>string</code>](#string) | A string value to test. |
 
 <a name="DayPoint.parse"></a>
 
@@ -775,7 +704,7 @@ _**Warning**: this method will throw an error for values that cannot be parsed._
 
 | Param | Type |
 | --- | --- |
-| value | <code>string</code> | 
+| value | [<code>string</code>](#string) | 
 
 <a name="DayPoint.tryParse"></a>
 
@@ -787,7 +716,7 @@ _**Note**: Will return null for values that cannot be parsed._
 
 | Param | Type |
 | --- | --- |
-| value | <code>string</code> | 
+| value | [<code>string</code>](#string) | 
 
 <a name="DayPoint.assumeNow"></a>
 
@@ -827,7 +756,7 @@ now as defined by the system clock.
         * [.roundUp([to])](#Money+roundUp) ⇒ [<code>Money</code>](#Money)
         * [.exchange(rate, currency)](#Money+exchange) ⇒ [<code>Money</code>](#Money)
         * [.isOfCurrency(other)](#Money+isOfCurrency) ⇒ <code>boolean</code>
-        * [.toString([format], [delimiter])](#Money+toString) ⇒ <code>string</code>
+        * [.toString([format], [delimiter])](#Money+toString) ⇒ [<code>string</code>](#string)
     * _static_
         * [.zero(currency)](#Money.zero) ⇒ [<code>Money</code>](#Money)
         * [.isMoney(other)](#Money.isMoney) ⇒ <code>boolean</code>
@@ -842,7 +771,7 @@ now as defined by the system clock.
 | Param | Type |
 | --- | --- |
 | amount | <code>number</code> | 
-| [currency] | <code>string</code> | 
+| [currency] | [<code>string</code>](#string) | 
 
 <a name="Money+cents"></a>
 
@@ -1005,7 +934,7 @@ Use `isOfCurrency` to check currencies and `exchange` as necessary._
 | Param | Type | Description |
 | --- | --- | --- |
 | rate | <code>number</code> | rate of exchange |
-| currency | <code>string</code> | symbol for target currency |
+| currency | [<code>string</code>](#string) | symbol for target currency |
 
 <a name="Money+isOfCurrency"></a>
 
@@ -1020,7 +949,7 @@ Use `isOfCurrency` to check currencies and `exchange` as necessary._
 
 <a name="Money+toString"></a>
 
-### money.toString([format], [delimiter]) ⇒ <code>string</code>
+### money.toString([format], [delimiter]) ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>Money</code>](#Money)  
 **Summary**: Returns a string representation of this formatted to the
 passed format, where format follows the following rules:<br/>
@@ -1030,8 +959,8 @@ passed format, where format follows the following rules:<br/>
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| [format] | <code>string</code> | <code>&quot;d.c2&quot;</code> | format string. |
-| [delimiter] | <code>string</code> |  | a 1000x grouping delimiter. |
+| [format] | [<code>string</code>](#string) | <code>&quot;d.c2&quot;</code> | format string. |
+| [delimiter] | [<code>string</code>](#string) |  | a 1000x grouping delimiter. |
 
 <a name="Money.zero"></a>
 
@@ -1042,7 +971,7 @@ passed format, where format follows the following rules:<br/>
 
 | Param | Type |
 | --- | --- |
-| currency | <code>string</code> | 
+| currency | [<code>string</code>](#string) | 
 
 <a name="Money.isMoney"></a>
 
@@ -1110,7 +1039,7 @@ if value can be parsed into `Money`, otherwise null.
         * [.multiply(other)](#Coord+multiply) ⇒ [<code>Coord</code>](#Coord)
         * [.divide(other)](#Coord+divide) ⇒ [<code>Coord</code>](#Coord)
         * [.round(toNearest)](#Coord+round) ⇒ [<code>Coord</code>](#Coord)
-        * [.toString()](#Coord+toString) ⇒ <code>string</code>
+        * [.toString()](#Coord+toString) ⇒ [<code>string</code>](#string)
     * _static_
         * [.canParse(value)](#Coord.canParse) ⇒ <code>boolean</code>
         * [.parse(obj)](#Coord.parse) ⇒ [<code>Coord</code>](#Coord)
@@ -1223,7 +1152,7 @@ if value can be parsed into `Money`, otherwise null.
 
 <a name="Coord+toString"></a>
 
-### coord.toString() ⇒ <code>string</code>
+### coord.toString() ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>Coord</code>](#Coord)  
 **Summary**: Returns string value.  
 **Access**: public  
@@ -1236,7 +1165,7 @@ if value can be parsed into `Money`, otherwise null.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | A string value to test. |
+| value | [<code>string</code>](#string) | A string value to test. |
 
 <a name="Coord.parse"></a>
 
@@ -1362,93 +1291,29 @@ _**Note**: Will return null for values that cannot be parsed._
 **Kind**: instance method of [<code>Timeout</code>](#Timeout)  
 **Summary**: Clears timer.  
 **Access**: public  
-<a name="escape"></a>
+<a name="math"></a>
 
-## escape ⇒ <code>string</code>
-**Kind**: global constant  
+## math : <code>object</code>
+**Kind**: global namespace  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | A regex string to escape for using in RegExp(string) |
+* [math](#math) : <code>object</code>
+    * [.random([min], [max])](#math.random) ⇒ <code>number</code>
+    * [.round(value, toNearest)](#math.round) ⇒ <code>number</code>
+    * [.roundUp(value, toNearest)](#math.roundUp) ⇒ <code>number</code>
+    * [.roundDown(value, toNearest)](#math.roundDown) ⇒ <code>number</code>
+    * [.roundTowardZero(value, toNearest)](#math.roundTowardZero) ⇒ <code>number</code>
+    * [.gcd(a, b)](#math.gcd) ⇒ <code>number</code>
+    * [.fib(n)](#math.fib) ⇒ <code>number</code>
+    * [.fib2(n)](#math.fib2) ⇒ <code>number</code>
+    * [.fibArray(n)](#math.fibArray) ⇒ <code>number</code>
+    * [.fibArray2(n)](#math.fibArray2) ⇒ <code>number</code>
+    * [.tryParseInt(value, valueIfNan)](#math.tryParseInt) ⇒ <code>number</code>
+    * [.tryParseFloat(value, valueIfNan)](#math.tryParseFloat) ⇒ <code>number</code>
 
-<a name="alpha"></a>
+<a name="math.random"></a>
 
-## alpha : <code>RegExp</code>
-**Kind**: global constant  
-<a name="alphaNumeric"></a>
-
-## alphaNumeric : <code>RegExp</code>
-**Kind**: global constant  
-<a name="base64"></a>
-
-## base64 : <code>RegExp</code>
-**Kind**: global constant  
-<a name="dataUrl"></a>
-
-## dataUrl : <code>RegExp</code>
-**Kind**: global constant  
-<a name="email"></a>
-
-## email : <code>RegExp</code>
-**Kind**: global constant  
-<a name="empty"></a>
-
-## empty : <code>RegExp</code>
-**Kind**: global constant  
-<a name="numeric"></a>
-
-## numeric : <code>RegExp</code>
-**Kind**: global constant  
-<a name="script"></a>
-
-## script : <code>RegExp</code>
-**Kind**: global constant  
-<a name="uid"></a>
-
-## uid : <code>RegExp</code>
-**Kind**: global constant  
-<a name="url"></a>
-
-## url : <code>RegExp</code>
-**Kind**: global constant  
-<a name="uuid"></a>
-
-## uuid : <code>RegExp</code>
-**Kind**: global constant  
-<a name="deduplicate"></a>
-
-## deduplicate(array) ⇒ <code>Array</code>
-**Kind**: global function  
-**Summary**: Returns a new array with values of input array having duplicates removed.  
-
-| Param | Type |
-| --- | --- |
-| array | <code>Array</code> | 
-
-<a name="uid"></a>
-
-## uid() ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a "unique" string.  
-<a name="uuid"></a>
-
-## uuid() ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a universally "unique" string.  
-<a name="suid"></a>
-
-## suid() ⇒ <code>symbol</code>
-**Kind**: global function  
-**Summary**: Returns a Symbol with a "unique" description.  
-<a name="suuid"></a>
-
-## suuid() ⇒ <code>symbol</code>
-**Kind**: global function  
-**Summary**: Returns a Sumbol with a universally "unique" description.  
-<a name="random"></a>
-
-## random([min], [max]) ⇒ <code>number</code>
-**Kind**: global function  
+### math.random([min], [max]) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns a random value between 0 and 1 by default. Will
 return a random number between a min an max value if passed.  
 
@@ -1457,10 +1322,10 @@ return a random number between a min an max value if passed.
 | [min] | <code>number</code> | random number will not precede this value. |
 | [max] | <code>number</code> | random number will not exceed this value. |
 
-<a name="round"></a>
+<a name="math.round"></a>
 
-## round(value, toNearest) ⇒ <code>number</code>
-**Kind**: global function  
+### math.round(value, toNearest) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Rounds a value to the nearest tens exponent.  
 
 | Param | Type |
@@ -1468,10 +1333,10 @@ return a random number between a min an max value if passed.
 | value | <code>number</code> | 
 | toNearest | <code>number</code> | 
 
-<a name="roundUp"></a>
+<a name="math.roundUp"></a>
 
-## roundUp(value, toNearest) ⇒ <code>number</code>
-**Kind**: global function  
+### math.roundUp(value, toNearest) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Rounds a value up to the nearest tens exponent.  
 
 | Param | Type |
@@ -1479,10 +1344,10 @@ return a random number between a min an max value if passed.
 | value | <code>number</code> | 
 | toNearest | <code>number</code> | 
 
-<a name="roundDown"></a>
+<a name="math.roundDown"></a>
 
-## roundDown(value, toNearest) ⇒ <code>number</code>
-**Kind**: global function  
+### math.roundDown(value, toNearest) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Rounds a value down to the nearest tens exponent.  
 
 | Param | Type |
@@ -1490,10 +1355,10 @@ return a random number between a min an max value if passed.
 | value | <code>number</code> | 
 | toNearest | <code>number</code> | 
 
-<a name="roundTowardZero"></a>
+<a name="math.roundTowardZero"></a>
 
-## roundTowardZero(value, toNearest) ⇒ <code>number</code>
-**Kind**: global function  
+### math.roundTowardZero(value, toNearest) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Rounds a value toward zero to the nearest tens exponent.  
 
 | Param | Type |
@@ -1501,10 +1366,10 @@ return a random number between a min an max value if passed.
 | value | <code>number</code> | 
 | toNearest | <code>number</code> | 
 
-<a name="gcd"></a>
+<a name="math.gcd"></a>
 
-## gcd(a, b) ⇒ <code>number</code>
-**Kind**: global function  
+### math.gcd(a, b) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns the greatest common denominator for arguments a and b.  
 
 | Param | Type |
@@ -1512,10 +1377,10 @@ return a random number between a min an max value if passed.
 | a | <code>number</code> | 
 | b | <code>number</code> | 
 
-<a name="fib"></a>
+<a name="math.fib"></a>
 
-## fib(n) ⇒ <code>number</code>
-**Kind**: global function  
+### math.fib(n) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns the nth number in a Fibonacci set.<br/>
 _**Note**: zero indexed._<br/>
 _**Warning**: Due to this function's attempt at leveraging tail-calls
@@ -1525,10 +1390,10 @@ it can cause stack overflows for large values of n._
 | --- | --- | --- |
 | n | <code>number</code> | index. |
 
-<a name="fib2"></a>
+<a name="math.fib2"></a>
 
-## fib2(n) ⇒ <code>number</code>
-**Kind**: global function  
+### math.fib2(n) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns the nth number in a Fibonacci set.<br/>
 _**Note**: zero indexed._<br/>
 _**Warning**: This function has better performance and is not
@@ -1538,10 +1403,10 @@ prone to stack overflows as is fib._
 | --- | --- | --- |
 | n | <code>number</code> | index. |
 
-<a name="fibArray"></a>
+<a name="math.fibArray"></a>
 
-## fibArray(n) ⇒ <code>number</code>
-**Kind**: global function  
+### math.fibArray(n) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns an array of length n with Fibonacci values.<br/>
 _**Warning**: Due to this function's attempt at leveraging tail-calls
 it can cause stack overflows for large values of n._  
@@ -1550,10 +1415,10 @@ it can cause stack overflows for large values of n._
 | --- | --- | --- |
 | n | <code>number</code> | length. |
 
-<a name="fibArray2"></a>
+<a name="math.fibArray2"></a>
 
-## fibArray2(n) ⇒ <code>number</code>
-**Kind**: global function  
+### math.fibArray2(n) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns an array of length n with Fibonacci values.<br/>
 _**Warning**: This function has better performance and is not
 prone to stack overflows as is fibArray._  
@@ -1562,29 +1427,235 @@ prone to stack overflows as is fibArray._
 | --- | --- | --- |
 | n | <code>number</code> | length. |
 
-<a name="tryParseInt"></a>
+<a name="math.tryParseInt"></a>
 
-## tryParseInt(value, valueIfNan) ⇒ <code>number</code>
-**Kind**: global function  
+### math.tryParseInt(value, valueIfNan) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns a parsed integer value for values that can be parsed,
 or a set value if passed, or zero.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | value to parse. |
+| value | [<code>string</code>](#string) | value to parse. |
 | valueIfNan | <code>number</code> | value to return if {value} cannot be parsed. |
 
-<a name="tryParseFloat"></a>
+<a name="math.tryParseFloat"></a>
 
-## tryParseFloat(value, valueIfNan) ⇒ <code>number</code>
-**Kind**: global function  
+### math.tryParseFloat(value, valueIfNan) ⇒ <code>number</code>
+**Kind**: static method of [<code>math</code>](#math)  
 **Summary**: Returns a parsed float value for values that can be parsed,
 or a set value if passed, or zero.  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | value to parse. |
+| value | [<code>string</code>](#string) | value to parse. |
 | valueIfNan | <code>number</code> | value to return if {value} cannot be parsed. |
+
+<a name="regex"></a>
+
+## regex : <code>object</code>
+**Kind**: global namespace  
+
+* [regex](#regex) : <code>object</code>
+    * [.alpha](#regex.alpha) : <code>RegExp</code>
+    * [.alphaNumeric](#regex.alphaNumeric) : <code>RegExp</code>
+    * [.base64](#regex.base64) : <code>RegExp</code>
+    * [.dataUrl](#regex.dataUrl) : <code>RegExp</code>
+    * [.email](#regex.email) : <code>RegExp</code>
+    * [.empty](#regex.empty) : <code>RegExp</code>
+    * [.numeric](#regex.numeric) : <code>RegExp</code>
+    * [.script](#regex.script) : <code>RegExp</code>
+    * [.uid](#regex.uid) : <code>RegExp</code>
+    * [.url](#regex.url) : <code>RegExp</code>
+    * [.uuid](#regex.uuid) : <code>RegExp</code>
+    * [.debounce(regex)](#regex.debounce) ⇒ [<code>string</code>](#string)
+    * [.escape(string)](#regex.escape) ⇒ [<code>string</code>](#string)
+
+<a name="regex.alpha"></a>
+
+### regex.alpha : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.alphaNumeric"></a>
+
+### regex.alphaNumeric : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.base64"></a>
+
+### regex.base64 : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.dataUrl"></a>
+
+### regex.dataUrl : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.email"></a>
+
+### regex.email : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.empty"></a>
+
+### regex.empty : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.numeric"></a>
+
+### regex.numeric : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.script"></a>
+
+### regex.script : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.uid"></a>
+
+### regex.uid : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.url"></a>
+
+### regex.url : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.uuid"></a>
+
+### regex.uuid : <code>RegExp</code>
+**Kind**: static constant of [<code>regex</code>](#regex)  
+<a name="regex.debounce"></a>
+
+### regex.debounce(regex) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>regex</code>](#regex)  
+**Summary**: Converts a RegExp to a Regular Expression pattern string.  
+**Returns**: [<code>string</code>](#string) - - Regular Expression pattern  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| regex | <code>RegExp</code> | RegExp to convert to pattern |
+
+<a name="regex.escape"></a>
+
+### regex.escape(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>regex</code>](#regex)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | A regex string to escape for using in RegExp(string) |
+
+<a name="string"></a>
+
+## string : <code>object</code>
+**Kind**: global namespace  
+
+* [string](#string) : <code>object</code>
+    * [.exports.build(rest)](#string.exports.build) ⇒ [<code>string</code>](#string)
+    * [.exports.chunk(string, size)](#string.exports.chunk) ⇒ [<code>Array.&lt;string&gt;</code>](#string)
+    * [.exports.format(format, rest)](#string.exports.format) ⇒ [<code>string</code>](#string)
+    * [.exports.trim(string)](#string.exports.trim) ⇒ [<code>string</code>](#string)
+    * [.exports.trimStart(string)](#string.exports.trimStart) ⇒ [<code>string</code>](#string)
+    * [.exports.trimEnd(string)](#string.exports.trimEnd) ⇒ [<code>string</code>](#string)
+    * [.exports.capitalize(string)](#string.exports.capitalize) ⇒ [<code>string</code>](#string)
+    * [.exports.mask(string, template, [char])](#string.exports.mask) ⇒ [<code>string</code>](#string)
+    * [.exports.unmask(string, template, [char])](#string.exports.unmask) ⇒ [<code>string</code>](#string)
+
+<a name="string.exports.build"></a>
+
+### string.exports.build(rest) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Builds a string from string arguments.  
+
+| Param |
+| --- |
+| rest | 
+
+<a name="string.exports.chunk"></a>
+
+### string.exports.chunk(string, size) ⇒ [<code>Array.&lt;string&gt;</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns an array of substring strings of size.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | the string value to chunk. |
+| size | <code>number</code> | the size of each chunk. |
+
+<a name="string.exports.format"></a>
+
+### string.exports.format(format, rest) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string template filled with passed values.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| format | [<code>string</code>](#string) | String format in the form "${0} indexed ${1}." |
+| rest | [<code>string</code>](#string) | Value arguments e.g. "Zero", "arguments" |
+
+<a name="string.exports.trim"></a>
+
+### string.exports.trim(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string with leading and trailing whitespace trimmed.  
+
+| Param |
+| --- |
+| string | 
+
+<a name="string.exports.trimStart"></a>
+
+### string.exports.trimStart(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string with leading whitespace trimmed.  
+
+| Param |
+| --- |
+| string | 
+
+<a name="string.exports.trimEnd"></a>
+
+### string.exports.trimEnd(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string with trailing whitespace trimmed.  
+
+| Param |
+| --- |
+| string | 
+
+<a name="string.exports.capitalize"></a>
+
+### string.exports.capitalize(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string with the first character capitalized.  
+
+| Param |
+| --- |
+| string | 
+
+<a name="string.exports.mask"></a>
+
+### string.exports.mask(string, template, [char]) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string masked over the passed template.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | String to mask |
+| template | [<code>string</code>](#string) \| <code>function</code> | Mask template |
+| [char] | [<code>string</code>](#string) | Mask character in template defaults to '_'. |
+
+<a name="string.exports.unmask"></a>
+
+### string.exports.unmask(string, template, [char]) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Returns a string unmasked over the passed template.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | String to unmask |
+| template | [<code>string</code>](#string) \| <code>function</code> | Mask template |
+| [char] | [<code>string</code>](#string) | Mask character in template defaults to '_'. |
+
+<a name="deduplicate"></a>
+
+## deduplicate(array) ⇒ <code>Array</code>
+**Kind**: global function  
+**Summary**: Returns a new array with values of input array having duplicates removed.  
+
+| Param | Type |
+| --- | --- |
+| array | <code>Array</code> | 
 
 <a name="debounce"></a>
 
@@ -1634,115 +1705,6 @@ or the value if the passed method throws an error.
 | --- | --- | --- |
 | method | <code>AsyncFunction</code> \| <code>Promise</code> | method to execute. |
 | value | <code>\*</code> | Value to return if method fails. |
-
-<a name="debounce"></a>
-
-## debounce(regex) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Converts a RegExp to a Regular Expression pattern string.  
-**Returns**: <code>string</code> - - Regular Expression pattern  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| regex | <code>RegExp</code> | RegExp to convert to pattern |
-
-<a name="build"></a>
-
-## build(rest) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Builds a string from string arguments  
-
-| Param |
-| --- |
-| rest | 
-
-<a name="chunk"></a>
-
-## chunk(string, size) ⇒ <code>Array.&lt;string&gt;</code>
-/**
-
-**Kind**: global function  
-**Summary**: Returns an array of substring strings of size  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | the string value to chunk. |
-| size | <code>number</code> | the size of each chunk. |
-
-<a name="format"></a>
-
-## format(format, rest) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string template filled with passed values.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| format | <code>string</code> | String format in the form "${0} indexed ${1}." |
-| rest | <code>string</code> | Value arguments e.g. "Zero", "arguments" |
-
-<a name="trim"></a>
-
-## trim(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string with leading and trailing whitespace trimmed.  
-
-| Param |
-| --- |
-| string | 
-
-<a name="trimStart"></a>
-
-## trimStart(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string with leading whitespace trimmed.  
-
-| Param |
-| --- |
-| string | 
-
-<a name="trimEnd"></a>
-
-## trimEnd(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string with trailing whitespace trimmed.  
-
-| Param |
-| --- |
-| string | 
-
-<a name="capitalize"></a>
-
-## capitalize(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string with the first character capitalized.  
-
-| Param |
-| --- |
-| string | 
-
-<a name="mask"></a>
-
-## mask(string, template, [char]) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string masked over the passed template  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | String to mask |
-| template | <code>string</code> \| <code>function</code> | Mask template |
-| [char] | <code>string</code> | Mask character in template defaults to '_'. |
-
-<a name="unmask"></a>
-
-## unmask(string, template, [char]) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Returns a string unmasked over the passed template  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | String to unmask |
-| template | <code>string</code> \| <code>function</code> | Mask template |
-| [char] | <code>string</code> | Mask character in template defaults to '_'. |
 
 <a name="nextTick"></a>
 
