@@ -21,26 +21,19 @@
 <dd></dd>
 </dl>
 
+## Objects
+
+<dl>
+<dt><a href="#form">form</a> : <code>object</code></dt>
+<dd></dd>
+<dt><a href="#string">string</a> : <code>object</code></dt>
+<dd></dd>
+</dl>
+
 ## Functions
 
 <dl>
-<dt><a href="#readData">readData(form)</a> ⇒ <code>FormData</code></dt>
-<dd></dd>
-<dt><a href="#read">read(form)</a> ⇒ <code>Object</code></dt>
-<dd></dd>
-<dt><a href="#readJson">readJson(form)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#write">write(form, data)</a></dt>
-<dd></dd>
 <dt><a href="#worker">worker(func)</a> ⇒ <code>Worker</code></dt>
-<dd></dd>
-<dt><a href="#encodeBase64">encodeBase64(string, [stripPadding])</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#decodeBase64">decodeBase64(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#encodeUtf8">encodeUtf8(string)</a> ⇒ <code>string</code></dt>
-<dd></dd>
-<dt><a href="#decodeUtf8">decodeUtf8(string)</a> ⇒ <code>string</code></dt>
 <dd></dd>
 </dl>
 
@@ -51,13 +44,13 @@
 **Summary**: serializes, deserializes, and reads browser cookies.  
 
 * [Cookie](#Cookie)
-    * [.serialize(value, [params])](#Cookie.serialize) ⇒ <code>string</code>
+    * [.serialize(value, [params])](#Cookie.serialize) ⇒ [<code>string</code>](#string)
     * [.deserialize(value)](#Cookie.deserialize) ⇒ <code>\*</code>
     * [.read(value)](#Cookie.read) ⇒ <code>Object</code>
 
 <a name="Cookie.serialize"></a>
 
-### Cookie.serialize(value, [params]) ⇒ <code>string</code>
+### Cookie.serialize(value, [params]) ⇒ [<code>string</code>](#string)
 **Kind**: static method of [<code>Cookie</code>](#Cookie)  
 **Access**: public  
 
@@ -65,10 +58,10 @@
 | --- | --- | --- |
 | value | <code>Object</code> | Data to be serialized |
 | [params] | <code>Object</code> | Cookie parameters |
-| [params.name] | <code>string</code> | Cookie name |
+| [params.name] | [<code>string</code>](#string) | Cookie name |
 | [params.expires] | <code>Date</code> | Cookie expiry date |
-| [params.path] | <code>string</code> | Cookie path |
-| [params.domain] | <code>string</code> | Cookie domain |
+| [params.path] | [<code>string</code>](#string) | Cookie path |
+| [params.domain] | [<code>string</code>](#string) | Cookie domain |
 | [params.secure] | <code>boolean</code> | Sets cookie to 'secure' when true |
 
 <a name="Cookie.deserialize"></a>
@@ -79,7 +72,7 @@
 
 | Param | Type |
 | --- | --- |
-| value | <code>string</code> | 
+| value | [<code>string</code>](#string) | 
 
 <a name="Cookie.read"></a>
 
@@ -90,7 +83,7 @@
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | Browser cookie to read. |
+| value | [<code>string</code>](#string) | Browser cookie to read. |
 
 <a name="Dto"></a>
 
@@ -102,7 +95,7 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 * [Dto](#Dto)
     * _instance_
         * [.value](#Dto+value) ⇒ <code>\*</code> \| <code>Object</code>
-        * [.name](#Dto+name) ⇒ <code>string</code>
+        * [.name](#Dto+name) ⇒ [<code>string</code>](#string)
         * [.name](#Dto+name)
         * [.read([key])](#Dto+read) ⇒ <code>\*</code>
         * [.remove(key)](#Dto+remove) ⇒ [<code>Dto</code>](#Dto)
@@ -112,10 +105,10 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
         * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
         * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
         * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
-        * [.encode([stripPadding], [unsafe])](#Dto+encode) ⇒ <code>string</code> \| <code>undefined</code>
+        * [.encode([stripPadding], [unsafe])](#Dto+encode) ⇒ [<code>string</code>](#string) \| <code>undefined</code>
         * [.toFormData()](#Dto+toFormData) ⇒ <code>FormData</code>
-        * [.toJson()](#Dto+toJson) ⇒ <code>string</code>
-        * [.toQueryString()](#Dto+toQueryString) ⇒ <code>string</code>
+        * [.toJson()](#Dto+toJson) ⇒ [<code>string</code>](#string)
+        * [.toQueryString()](#Dto+toQueryString) ⇒ [<code>string</code>](#string)
     * _static_
         * [.decode(value, [name])](#Dto.decode) ⇒ [<code>Dto</code>](#Dto)
         * [.parseFormData(value)](#Dto.parseFormData) ⇒ [<code>Dto</code>](#Dto)
@@ -131,7 +124,7 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 **Access**: public  
 <a name="Dto+name"></a>
 
-### dto.name ⇒ <code>string</code>
+### dto.name ⇒ [<code>string</code>](#string)
 **Kind**: instance property of [<code>Dto</code>](#Dto)  
 **Access**: public  
 <a name="Dto+name"></a>
@@ -142,7 +135,7 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 
 | Param | Type |
 | --- | --- |
-| value | <code>string</code> | 
+| value | [<code>string</code>](#string) | 
 
 <a name="Dto+read"></a>
 
@@ -153,7 +146,7 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 
 | Param | Type |
 | --- | --- |
-| [key] | <code>string</code> \| <code>number</code> | 
+| [key] | [<code>string</code>](#string) \| <code>number</code> | 
 
 <a name="Dto+remove"></a>
 
@@ -164,7 +157,7 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 
 | Param | Type |
 | --- | --- |
-| key | <code>string</code> \| <code>function</code> | 
+| key | [<code>string</code>](#string) \| <code>function</code> | 
 
 <a name="Dto+write"></a>
 
@@ -221,7 +214,7 @@ remove this Dto from persistent storage.
 **Access**: public  
 <a name="Dto+encode"></a>
 
-### dto.encode([stripPadding], [unsafe]) ⇒ <code>string</code> \| <code>undefined</code>
+### dto.encode([stripPadding], [unsafe]) ⇒ [<code>string</code>](#string) \| <code>undefined</code>
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Returns a base64 encoded string containg the value
 of of this Dto.  
@@ -240,13 +233,13 @@ of of this Dto.
 **Access**: public  
 <a name="Dto+toJson"></a>
 
-### dto.toJson() ⇒ <code>string</code>
+### dto.toJson() ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Returns Dto as JSON  
 **Access**: public  
 <a name="Dto+toQueryString"></a>
 
-### dto.toQueryString() ⇒ <code>string</code>
+### dto.toQueryString() ⇒ [<code>string</code>](#string)
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Returns Dto as query string  
 **Access**: public  
@@ -259,8 +252,8 @@ of of this Dto.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | <code>string</code> | Initial value for the returned Dto. |
-| [name] | <code>string</code> | Name for the returned Dto. |
+| value | [<code>string</code>](#string) | Initial value for the returned Dto. |
+| [name] | [<code>string</code>](#string) | Name for the returned Dto. |
 
 <a name="Dto.parseFormData"></a>
 
@@ -324,16 +317,16 @@ of of this Dto.
 **Summary**: Device abstraction  
 
 * [Device](#Device)
-    * [.orientation](#Device.orientation) ⇒ <code>string</code>
-    * [.landscapePrimary](#Device.landscapePrimary) ⇒ <code>string</code>
-    * [.landscapeSecondary](#Device.landscapeSecondary) ⇒ <code>string</code>
-    * [.portraitPrimary](#Device.portraitPrimary) ⇒ <code>string</code>
-    * [.portraitSecondary](#Device.portraitSecondary) ⇒ <code>string</code>
+    * [.orientation](#Device.orientation) ⇒ [<code>string</code>](#string)
+    * [.landscapePrimary](#Device.landscapePrimary) ⇒ [<code>string</code>](#string)
+    * [.landscapeSecondary](#Device.landscapeSecondary) ⇒ [<code>string</code>](#string)
+    * [.portraitPrimary](#Device.portraitPrimary) ⇒ [<code>string</code>](#string)
+    * [.portraitSecondary](#Device.portraitSecondary) ⇒ [<code>string</code>](#string)
     * [.isMobile](#Device.isMobile) ⇒ <code>boolean</code>
 
 <a name="Device.orientation"></a>
 
-### Device.orientation ⇒ <code>string</code>
+### Device.orientation ⇒ [<code>string</code>](#string)
 **Kind**: static property of [<code>Device</code>](#Device)  
 **Summary**: Returns the current Device orientation which can be
 tested against the available Device orientation
@@ -341,25 +334,25 @@ constants to determine the orientation of the device.
 **Access**: public  
 <a name="Device.landscapePrimary"></a>
 
-### Device.landscapePrimary ⇒ <code>string</code>
+### Device.landscapePrimary ⇒ [<code>string</code>](#string)
 **Kind**: static property of [<code>Device</code>](#Device)  
 **Summary**: Constant to test if device is oriented in landscape.  
 **Access**: public  
 <a name="Device.landscapeSecondary"></a>
 
-### Device.landscapeSecondary ⇒ <code>string</code>
+### Device.landscapeSecondary ⇒ [<code>string</code>](#string)
 **Kind**: static property of [<code>Device</code>](#Device)  
 **Summary**: Constant to test if device is oriented in landscape.  
 **Access**: public  
 <a name="Device.portraitPrimary"></a>
 
-### Device.portraitPrimary ⇒ <code>string</code>
+### Device.portraitPrimary ⇒ [<code>string</code>](#string)
 **Kind**: static property of [<code>Device</code>](#Device)  
 **Summary**: Constant to test if device is oriented in portrait.  
 **Access**: public  
 <a name="Device.portraitSecondary"></a>
 
-### Device.portraitSecondary ⇒ <code>string</code>
+### Device.portraitSecondary ⇒ [<code>string</code>](#string)
 **Kind**: static property of [<code>Device</code>](#Device)  
 **Summary**: Constant to test if device is oriented in portrait
 and upside-down.  
@@ -777,7 +770,7 @@ unsubscribe target listener from keyboard.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
+| name | [<code>string</code>](#string) | Name of target collection. |
 
 <a name="Store.write"></a>
 
@@ -788,7 +781,7 @@ unsubscribe target listener from keyboard.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
+| name | [<code>string</code>](#string) | Name of target collection. |
 | data | <code>\*</code> | Data to write to collection |
 
 <a name="Store.remove"></a>
@@ -800,7 +793,7 @@ unsubscribe target listener from keyboard.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
+| name | [<code>string</code>](#string) | Name of target collection. |
 
 <a name="Store.delete"></a>
 
@@ -811,7 +804,7 @@ unsubscribe target listener from keyboard.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| name | <code>string</code> | Name of target collection. |
+| name | [<code>string</code>](#string) | Name of target collection. |
 
 <a name="Store.save"></a>
 
@@ -831,20 +824,31 @@ unsubscribe target listener from keyboard.
 **Kind**: static method of [<code>Store</code>](#Store)  
 **Summary**: True if the Store is saved.  
 **Access**: public  
-<a name="readData"></a>
+<a name="form"></a>
 
-## readData(form) ⇒ <code>FormData</code>
-**Kind**: global function  
+## form : <code>object</code>
+**Kind**: global namespace  
+
+* [form](#form) : <code>object</code>
+    * [.readData(form)](#form.readData) ⇒ <code>FormData</code>
+    * [.read(form)](#form.read) ⇒ <code>Object</code>
+    * [.readJson(form)](#form.readJson) ⇒ [<code>string</code>](#string)
+    * [.write(form, data)](#form.write)
+
+<a name="form.readData"></a>
+
+### form.readData(form) ⇒ <code>FormData</code>
+**Kind**: static method of [<code>form</code>](#form)  
 **Summary**: Reads data as FormData from a form.  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | form | <code>HTMLFormElement</code> | the form to read. |
 
-<a name="read"></a>
+<a name="form.read"></a>
 
-## read(form) ⇒ <code>Object</code>
-**Kind**: global function  
+### form.read(form) ⇒ <code>Object</code>
+**Kind**: static method of [<code>form</code>](#form)  
 **Summary**: Reads data as an object of key value pairs
 from a form. Where the keys are the names of each
 field and the values are the value of these fields.  
@@ -853,10 +857,10 @@ field and the values are the value of these fields.
 | --- | --- | --- |
 | form | <code>HTMLFormElement</code> | the form to read. |
 
-<a name="readJson"></a>
+<a name="form.readJson"></a>
 
-## readJson(form) ⇒ <code>string</code>
-**Kind**: global function  
+### form.readJson(form) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>form</code>](#form)  
 **Summary**: Reads data as JSON of key value pairs
 from a form. Where the keys are the names of each
 field and the values are the value of these fields.  
@@ -865,10 +869,10 @@ field and the values are the value of these fields.
 | --- | --- | --- |
 | form | <code>HTMLFormElement</code> | the form to read. |
 
-<a name="write"></a>
+<a name="form.write"></a>
 
-## write(form, data)
-**Kind**: global function  
+### form.write(form, data)
+**Kind**: static method of [<code>form</code>](#form)  
 **Summary**: Write data as an object to a form. Where
 the keys are the names of each field and the values
 are the value of these fields.  
@@ -877,6 +881,58 @@ are the value of these fields.
 | --- | --- | --- |
 | form | <code>HTMLFormElement</code> | the form to write to. |
 | data | <code>Object</code> |  |
+
+<a name="string"></a>
+
+## string : <code>object</code>
+**Kind**: global namespace  
+
+* [string](#string) : <code>object</code>
+    * [.encodeBase64(string, [stripPadding])](#string.encodeBase64) ⇒ [<code>string</code>](#string)
+    * [.exports.decodeBase64(string)](#string.exports.decodeBase64) ⇒ [<code>string</code>](#string)
+    * [.exports.encodeUtf8(string)](#string.exports.encodeUtf8) ⇒ [<code>string</code>](#string)
+    * [.exports.decodeUtf8(string)](#string.exports.decodeUtf8) ⇒ [<code>string</code>](#string)
+
+<a name="string.encodeBase64"></a>
+
+### string.encodeBase64(string, [stripPadding]) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Base64 encodes a string.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | string to encode |
+| [stripPadding] | <code>boolean</code> | return value will have base64 padding characters stripped when true. |
+
+<a name="string.exports.decodeBase64"></a>
+
+### string.exports.decodeBase64(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Decodes Base64 encoded string.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | string to decode. |
+
+<a name="string.exports.encodeUtf8"></a>
+
+### string.exports.encodeUtf8(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: UTF8 encodes a string.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | string to encode |
+
+<a name="string.exports.decodeUtf8"></a>
+
+### string.exports.decodeUtf8(string) ⇒ [<code>string</code>](#string)
+**Kind**: static method of [<code>string</code>](#string)  
+**Summary**: Decodes UTF8 encoded string.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| string | [<code>string</code>](#string) | string to decode. |
 
 <a name="worker"></a>
 
@@ -887,45 +943,4 @@ are the value of these fields.
 | Param | Type | Description |
 | --- | --- | --- |
 | func | <code>function</code> | Function containing the logic to be run in the Worker. |
-
-<a name="encodeBase64"></a>
-
-## encodeBase64(string, [stripPadding]) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Base64 encodes a string.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | string to encode |
-| [stripPadding] | <code>boolean</code> | return value will have base64 padding characters stripped when true. |
-
-<a name="decodeBase64"></a>
-
-## decodeBase64(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Decodes Base64 encoded string.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | string to decode. |
-
-<a name="encodeUtf8"></a>
-
-## encodeUtf8(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: UTF8 encodes a string.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | string to encode |
-
-<a name="decodeUtf8"></a>
-
-## decodeUtf8(string) ⇒ <code>string</code>
-**Kind**: global function  
-**Summary**: Decodes UTF8 encoded string.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| string | <code>string</code> | string to decode. |
 
