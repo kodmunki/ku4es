@@ -102,9 +102,6 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
         * [.write(key, value)](#Dto+write) ⇒ [<code>Dto</code>](#Dto)
         * [.update(value)](#Dto+update) ⇒ [<code>Dto</code>](#Dto)
         * [.clear()](#Dto+clear) ⇒ [<code>Dto</code>](#Dto)
-        * [.save()](#Dto+save) ⇒ [<code>Dto</code>](#Dto)
-        * [.saveAs(name)](#Dto+saveAs) ⇒ [<code>Dto</code>](#Dto)
-        * [.delete()](#Dto+delete) ⇒ [<code>Dto</code>](#Dto)
         * [.encode([stripPadding], [unsafe])](#Dto+encode) ⇒ [<code>string</code>](#string) \| <code>undefined</code>
         * [.toFormData()](#Dto+toFormData) ⇒ <code>FormData</code>
         * [.toJson()](#Dto+toJson) ⇒ [<code>string</code>](#string)
@@ -115,7 +112,6 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
         * [.parseJson(value)](#Dto.parseJson) ⇒ [<code>Dto</code>](#Dto)
         * [.parseJwt(value)](#Dto.parseJwt) ⇒ <code>any</code>
         * [.parseQueryString(value)](#Dto.parseQueryString) ⇒ [<code>Dto</code>](#Dto)
-        * [.load(name)](#Dto.load) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
 
 <a name="Dto+value"></a>
 
@@ -188,29 +184,6 @@ data into multiple formats: JSON, Query String, Form Data, JWT, base64.
 **Kind**: instance method of [<code>Dto</code>](#Dto)  
 **Summary**: Clears all data from this Dto. It does not
 remove this Dto from persistent storage.  
-**Access**: public  
-<a name="Dto+save"></a>
-
-### dto.save() ⇒ [<code>Dto</code>](#Dto)
-**Kind**: instance method of [<code>Dto</code>](#Dto)  
-**Summary**: Save Dto  
-**Access**: public  
-<a name="Dto+saveAs"></a>
-
-### dto.saveAs(name) ⇒ [<code>Dto</code>](#Dto)
-**Kind**: instance method of [<code>Dto</code>](#Dto)  
-**Summary**: Save Dto as name  
-**Access**: public  
-
-| Param |
-| --- |
-| name | 
-
-<a name="Dto+delete"></a>
-
-### dto.delete() ⇒ [<code>Dto</code>](#Dto)
-**Kind**: instance method of [<code>Dto</code>](#Dto)  
-**Summary**: Delete locally saved Dto  
 **Access**: public  
 <a name="Dto+encode"></a>
 
@@ -298,17 +271,6 @@ of of this Dto.
 | Param |
 | --- |
 | value | 
-
-<a name="Dto.load"></a>
-
-### Dto.load(name) ⇒ [<code>Promise.&lt;Dto&gt;</code>](#Dto)
-**Kind**: static method of [<code>Dto</code>](#Dto)  
-**Summary**: Load a locally saved Dto by name  
-**Access**: public  
-
-| Param |
-| --- |
-| name | 
 
 <a name="Device"></a>
 
