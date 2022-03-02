@@ -792,10 +792,21 @@ unsubscribe target listener from keyboard.
 **Kind**: global namespace  
 
 * [form](#form) : <code>object</code>
+    * [.readFieldNames(form)](#form.readFieldNames) ⇒ <code>Array.&lt;String&gt;</code>
     * [.readData(form)](#form.readData) ⇒ <code>FormData</code>
     * [.read(form)](#form.read) ⇒ <code>Object</code>
     * [.readJson(form)](#form.readJson) ⇒ [<code>string</code>](#string)
     * [.write(form, data)](#form.write)
+
+<a name="form.readFieldNames"></a>
+
+### form.readFieldNames(form) ⇒ <code>Array.&lt;String&gt;</code>
+**Kind**: static method of [<code>form</code>](#form)  
+**Summary**: Reads all field names of a form.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| form | <code>HTMLFormElement</code> | the form to read. |
 
 <a name="form.readData"></a>
 
