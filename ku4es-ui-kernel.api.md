@@ -19,6 +19,10 @@
 <dd></dd>
 <dt><a href="#Store">Store</a></dt>
 <dd></dd>
+<dt><a href="#ResilientWebSocket">ResilientWebSocket</a> ⇐ <code><a href="#WebSocket">WebSocket</a></code></dt>
+<dd></dd>
+<dt><a href="#WebSocket">WebSocket</a></dt>
+<dd></dd>
 </dl>
 
 ## Objects
@@ -34,6 +38,10 @@
 
 <dl>
 <dt><a href="#worker">worker(func)</a> ⇒ <code>Worker</code></dt>
+<dd></dd>
+<dt><a href="#disconnect">disconnect()</a></dt>
+<dd></dd>
+<dt><a href="#$handleOpen">$handleOpen()</a></dt>
 <dd></dd>
 </dl>
 
@@ -786,6 +794,127 @@ unsubscribe target listener from keyboard.
 **Kind**: static method of [<code>Store</code>](#Store)  
 **Summary**: True if the Store is saved.  
 **Access**: public  
+<a name="ResilientWebSocket"></a>
+
+## ResilientWebSocket ⇐ [<code>WebSocket</code>](#WebSocket)
+**Kind**: global class  
+**Summary**: Creates a WebSocket that attempts to remain open by sending interval
+messages to the endpoint, and attempting to reconnect if/when the
+connection is closed.  
+**Extends**: [<code>WebSocket</code>](#WebSocket)  
+<a name="new_ResilientWebSocket_new"></a>
+
+### new ResilientWebSocket(interval, [message])
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| interval | <code>number</code> |  | The interval to send messages to the endpoint. |
+| [message] | <code>number</code> | <code>&#x27;ping&#x27;</code> | The message to send on interval. |
+
+<a name="WebSocket"></a>
+
+## WebSocket
+**Kind**: global class  
+**Summary**: WebSocket abstraction.  
+
+* [WebSocket](#WebSocket)
+    * [.connect(url)](#WebSocket.connect) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.reconnect()](#WebSocket.reconnect) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.disconnect()](#WebSocket.disconnect) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.listen(method)](#WebSocket.listen) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.ignore(method)](#WebSocket.ignore) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.send(message)](#WebSocket.send) ⇒ [<code>WebSocket</code>](#WebSocket)
+    * [.$handleOpen()](#WebSocket.$handleOpen)
+    * [.$handleClose()](#WebSocket.$handleClose)
+    * [.$handleError()](#WebSocket.$handleError)
+
+<a name="WebSocket.connect"></a>
+
+### WebSocket.connect(url) ⇒ [<code>WebSocket</code>](#WebSocket)
+Connect this WebSocket to endpoint at url.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| url | [<code>string</code>](#string) | URL to connect this WebSocket to. |
+
+<a name="WebSocket.reconnect"></a>
+
+### WebSocket.reconnect() ⇒ [<code>WebSocket</code>](#WebSocket)
+Reconnect this WebSocket to connection endpoint url and
+reconnect all existing listeners to new connection.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+<a name="WebSocket.disconnect"></a>
+
+### WebSocket.disconnect() ⇒ [<code>WebSocket</code>](#WebSocket)
+Disconnect this WebSocket.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+<a name="WebSocket.listen"></a>
+
+### WebSocket.listen(method) ⇒ [<code>WebSocket</code>](#WebSocket)
+Listen for messages send from the endpoint.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| method | <code>function</code> | A function that takes one string argument that will be called every time this WebSocket receives a message from the endpoint. |
+
+<a name="WebSocket.ignore"></a>
+
+### WebSocket.ignore(method) ⇒ [<code>WebSocket</code>](#WebSocket)
+Ignore a currently listened method.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| method | <code>function</code> | A current listening message to ignore. |
+
+<a name="WebSocket.send"></a>
+
+### WebSocket.send(message) ⇒ [<code>WebSocket</code>](#WebSocket)
+Send a message to the endpoint.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: public  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| message | [<code>string</code>](#string) | Message to send. |
+
+<a name="WebSocket.$handleOpen"></a>
+
+### WebSocket.$handleOpen()
+Called when the #socket<WebSocket> open event fires.
+Sub-classes should override to wire into this event.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: protected  
+<a name="WebSocket.$handleClose"></a>
+
+### WebSocket.$handleClose()
+Called when the #socket<WebSocket> close event fires.
+Sub-classes should override to wire into this event.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: protected  
+<a name="WebSocket.$handleError"></a>
+
+### WebSocket.$handleError()
+Called when the #socket<WebSocket> error event fires.
+Sub-classes should override to wire into this event.
+
+**Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
+**Access**: protected  
 <a name="form"></a>
 
 ## form : <code>object</code>
@@ -917,3 +1046,13 @@ are the value of these fields.
 | --- | --- | --- |
 | func | <code>function</code> | Function containing the logic to be run in the Worker. |
 
+<a name="disconnect"></a>
+
+## disconnect()
+**Kind**: global function  
+**Access**: public  
+<a name="$handleOpen"></a>
+
+## $handleOpen()
+**Kind**: global function  
+**Access**: protected  
