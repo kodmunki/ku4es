@@ -894,7 +894,7 @@ Send a message to the endpoint.
 <a name="WebSocket.$handleOpen"></a>
 
 ### WebSocket.$handleOpen()
-Called when the #socket<WebSocket> open event fires.
+Called when the _socket<WebSocket> open event fires.
 Sub-classes should override to wire into this event.
 
 **Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
@@ -902,7 +902,7 @@ Sub-classes should override to wire into this event.
 <a name="WebSocket.$handleClose"></a>
 
 ### WebSocket.$handleClose()
-Called when the #socket<WebSocket> close event fires.
+Called when the _socket<WebSocket> close event fires.
 Sub-classes should override to wire into this event.
 
 **Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
@@ -910,7 +910,7 @@ Sub-classes should override to wire into this event.
 <a name="WebSocket.$handleError"></a>
 
 ### WebSocket.$handleError()
-Called when the #socket<WebSocket> error event fires.
+Called when the _socket<WebSocket> error event fires.
 Sub-classes should override to wire into this event.
 
 **Kind**: static method of [<code>WebSocket</code>](#WebSocket)  
