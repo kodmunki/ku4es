@@ -37,6 +37,8 @@
 ## Functions
 
 <dl>
+<dt><a href="#open">open(url, [target], [onOpen])</a></dt>
+<dd></dd>
 <dt><a href="#worker">worker(func)</a> ⇒ <code>Worker</code></dt>
 <dd></dd>
 <dt><a href="#disconnect">disconnect()</a></dt>
@@ -809,7 +811,7 @@ connection is closed.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | interval | <code>number</code> |  | The interval to send messages to the endpoint. |
-| [message] | <code>number</code> | <code>&#x27;ping&#x27;</code> | The message to send on interval. |
+| [message] | [<code>string</code>](#string) | <code>&quot;&#x27;ping&#x27;&quot;</code> | The message to send on interval. |
 
 <a name="WebSocket"></a>
 
@@ -1035,6 +1037,18 @@ are the value of these fields.
 | Param | Type | Description |
 | --- | --- | --- |
 | string | [<code>string</code>](#string) | string to decode. |
+
+<a name="open"></a>
+
+## open(url, [target], [onOpen])
+**Kind**: global function  
+**Summary**: Opens a resource at url, bypassing broswer popup blockers  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| url | [<code>string</code>](#string) |  | URL to open |
+| [target] | <code>&#x27;\_blank&#x27;</code> \| <code>&#x27;\_self&#x27;</code> \| <code>&#x27;\_parent&#x27;</code> \| <code>&#x27;\_top&#x27;</code> | <code>&#x27;_blank&#x27;</code> | Optional value a tag target. |
+| [onOpen] | <code>function</code> |  | Optional function to call on target open |
 
 <a name="worker"></a>
 
