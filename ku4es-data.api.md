@@ -11,6 +11,9 @@
 <dt><a href="#readExif">readExif(file)</a> ⇒ <code>Object</code></dt>
 <dd><p>Read the EXIF data out of a valid BinaryFile.</p>
 </dd>
+<dt><a href="#read">read(file)</a> ⇒ <code>*</code></dt>
+<dd><p>Read the EXIF data out of a valid JPG BinaryFile.</p>
+</dd>
 </dl>
 
 <a name="BinaryFile"></a>
@@ -119,4 +122,15 @@ Read the EXIF data out of a valid BinaryFile.
 | Param | Type | Description |
 | --- | --- | --- |
 | file | [<code>BinaryFile</code>](#BinaryFile) | A valid JPEG BinaryFile |
+
+<a name="read"></a>
+
+## read(file) ⇒ <code>\*</code>
+Read the EXIF data out of a valid JPG BinaryFile.
+
+**Kind**: global function  
+
+| Param | Description |
+| --- | --- |
+| file | A valid JPG file binary |
 
