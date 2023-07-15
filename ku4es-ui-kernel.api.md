@@ -56,7 +56,7 @@
 * [Cookie](#Cookie)
     * [.serialize(value, [params])](#Cookie.serialize) ⇒ [<code>string</code>](#string)
     * [.deserialize(value)](#Cookie.deserialize) ⇒ <code>\*</code>
-    * [.read(value)](#Cookie.read) ⇒ <code>Object</code>
+    * [.read(name)](#Cookie.read) ⇒ <code>Object</code>
 
 <a name="Cookie.serialize"></a>
 
@@ -86,14 +86,14 @@
 
 <a name="Cookie.read"></a>
 
-### Cookie.read(value) ⇒ <code>Object</code>
+### Cookie.read(name) ⇒ <code>Object</code>
 **Kind**: static method of [<code>Cookie</code>](#Cookie)  
 **Summary**: Read data stored in a cookie  
 **Access**: public  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| value | [<code>string</code>](#string) | Browser cookie to read. |
+| name | [<code>string</code>](#string) | Browser cookie to read. |
 
 <a name="Dto"></a>
 
